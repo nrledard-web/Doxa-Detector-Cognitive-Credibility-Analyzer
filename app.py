@@ -8,7 +8,7 @@ import pandas as pd
 import streamlit as st
 
 st.set_page_config(
-    page_title="Mécroyance Lab — Fact-checking dur",
+    page_title="Mécroyance Lab — Fact-checking",
     page_icon="🧠",
     layout="wide",
 )
