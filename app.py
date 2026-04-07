@@ -14,6 +14,7 @@ st.set_page_config(
 import streamlit as st
 
 st.image("banner.png", use_container_width=True)
+
 SAMPLE_ARTICLE = """Titre : Une découverte historique va bouleverser la science pour toujours
 
 Des chercheurs affirment avoir trouvé une substance naturelle capable de guérir presque toutes les maladies. Selon plusieurs experts, cette avancée serait cachée depuis des années par certaines industries. Tout le monde devrait s'inquiéter. Aucune source officielle n'a encore publié de données complètes, mais les témoignages sont troublants et les résultats sembleraient indiscutables.
