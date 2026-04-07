@@ -1,5 +1,4 @@
 import re
-import math
 from dataclasses import dataclass
 from typing import List, Dict
 
@@ -18,7 +17,8 @@ st.image("banner.png", use_container_width=True)
 SAMPLE_ARTICLE = """Titre : Une découverte historique va bouleverser la science pour toujours
 
 Des chercheurs affirment avoir trouvé une substance naturelle capable de guérir presque toutes les maladies. Selon plusieurs experts, cette avancée serait cachée depuis des années par certaines industries. Tout le monde devrait s'inquiéter. Aucune source officielle n'a encore publié de données complètes, mais les témoignages sont troublants et les résultats sembleraient indiscutables.
-""" 
+"""
+
 
 # -----------------------------
 # Utilitaires
@@ -27,7 +27,13 @@ def clamp(value: float, min_value: float = 0.0, max_value: float = 20.0) -> floa
     return max(min_value, min(max_value, value))
 
 
-def normalize(value: float, in_min: float, in_max: float, out_min: float = 0.0, out_max: float = 20.0) -> float:
+def normalize(
+    value: float,
+    in_min: float,
+    in_max: float,
+    out_min: float = 0.0,
+    out_max: float = 20.0,
+) -> float:
     if in_max == in_min:
         return out_min
     ratio = (value - in_min) / (in_max - in_min)
@@ -111,8 +117,12 @@ class ClaimAssessment:
 def assess_claim(sentence: str) -> ClaimAssessment:
     has_number = bool(re.search(r"\b\d+(?:[.,]\d+)?\b", sentence))
     has_date = bool(re.search(r"\b(?:19|20)\d{2}\b", sentence))
-    has_named_entity = bool(re.search(r"\b[A-ZÉÈÀÂÊÎÔÛÄËÏÖÜ][a-zàâçéèêëîïôûùüÿñæœ'\-]{2,}\b", sentence))
-    has_source_cue = bool(re.search(r"selon|d'après|rapport|étude|données|publication|université|institut|journal|revue", sentence, re.I))
+    has_named_entity = bool(
+        re.search(r"\b[A-ZÉÈÀÂÊÎÔÛÄËÏÖÜ][a-zàâçéèêëîïôûùüÿñæœ'\-]{2,}\b", sentence)
+    )
+    has_source_cue = bool(
+        re.search(r"selon|d'après|rapport|étude|données|publication|université|institut|journal|revue", sentence, re.I)
+    )
     hedged = bool(re.search(r"semble|pourrait|suggère|à confirmer|probable", sentence, re.I))
     absolute = bool(re.search(r"toujours|jamais|indiscutable|certain|absolument|sans aucun doute|prouve", sentence, re.I))
     sensational = bool(re.search(r"choc|explosif|scandale|révélations|bouleverser", sentence, re.I))
@@ -165,13 +175,35 @@ def analyze_article(text: str) -> Dict:
     sentences = [s.strip() for s in re.split(r"[.!?]+", clean) if s.strip()]
     lower = clean.lower()
 
-    source_markers = count_matches(lower, r"selon|d'après|source|sources|étude|rapport|données|statistiques|recherche|journal|revue|université|institut|publication|enquête|archive|preuve|preuves")
-    citation_like = count_matches(clean, r"https?://|www\.|\[[0-9]+\]|\([0-9]{4}\)|%|\d+\s?(millions|milliards|%|ans|jours|mois)", re.I)
-    named_entities = count_matches(clean, r"\b[A-ZÉÈÀÂÊÎÔÛÄËÏÖÜ][a-zàâçéèêëîïôûùüÿñæœ'\-]{2,}\b")
-    hedges = count_matches(lower, r"semble|semblerait|probable|probablement|possible|possiblement|suggère|suggèrent|pourrait|pourraient|hypothèse|incertain|selon les premiers éléments|à confirmer")
-    certainty = count_matches(lower, r"toujours|jamais|indiscutable|indiscutables|prouve|preuve définitive|certain|certainement|absolument|sans aucun doute|tout le monde|personne ne|forcément|à coup sûr|vérité cachée|on vous ment|bouleverser|explosif|choc|scandale|incroyable")
-    emotional = count_matches(lower, r"scandale|honte|peur|catastrophe|mensonge|censure|complot|terrifiant|choquant|alarmant|panique|bouleverser|explosif|révélations")
-    nuance_markers = count_matches(lower, r"cependant|toutefois|néanmoins|en revanche|mais|d'un côté|de l'autre|limite|limites|réserve|réserves|biais|méthodologie|contexte|contre-argument|incertitude")
+    source_markers = count_matches(
+        lower,
+        r"selon|d'après|source|sources|étude|rapport|données|statistiques|recherche|journal|revue|université|institut|publication|enquête|archive|preuve|preuves",
+    )
+    citation_like = count_matches(
+        clean,
+        r"https?://|www\.|\[[0-9]+\]|\([0-9]{4}\)|%|\d+\s?(millions|milliards|%|ans|jours|mois)",
+        re.I,
+    )
+    named_entities = count_matches(
+        clean,
+        r"\b[A-ZÉÈÀÂÊÎÔÛÄËÏÖÜ][a-zàâçéèêëîïôûùüÿñæœ'\-]{2,}\b",
+    )
+    hedges = count_matches(
+        lower,
+        r"semble|semblerait|probable|probablement|possible|possiblement|suggère|suggèrent|pourrait|pourraient|hypothèse|incertain|selon les premiers éléments|à confirmer",
+    )
+    certainty = count_matches(
+        lower,
+        r"toujours|jamais|indiscutable|indiscutables|prouve|preuve définitive|certain|certainement|absolument|sans aucun doute|tout le monde|personne ne|forcément|à coup sûr|vérité cachée|on vous ment|bouleverser|explosif|choc|scandale|incroyable",
+    )
+    emotional = count_matches(
+        lower,
+        r"scandale|honte|peur|catastrophe|mensonge|censure|complot|terrifiant|choquant|alarmant|panique|bouleverser|explosif|révélations",
+    )
+    nuance_markers = count_matches(
+        lower,
+        r"cependant|toutefois|néanmoins|en revanche|mais|d'un côté|de l'autre|limite|limites|réserve|réserves|biais|méthodologie|contexte|contre-argument|incertitude",
+    )
     article_length = len(words)
     avg_sentence_length = (len(words) / len(sentences)) if sentences else 0
 
@@ -316,7 +348,7 @@ article = st.text_area(
 
 st.session_state.article = article
 
-analyser = st.button("🔍 Analyser l'article", use_container_width=True)
+analyser = st.button("🔍 Analyser l'article", use_container_width=True, type="primary")
 
 if analyser:
     result = analyze_article(article)
@@ -324,7 +356,11 @@ if analyser:
     col1, col2, col3 = st.columns(3)
     col1.metric("Score classique", result["M"], help="M = (G + N) − D")
     col2.metric("Score amélioré", result["improved"], help="Ajout de V et pénalité R")
-    col3.metric("Hard Fact Score", result["hard_fact_score"], help="Contrôle plus dur des affirmations et des sources")
+    col3.metric(
+        "Hard Fact Score",
+        result["hard_fact_score"],
+        help="Contrôle plus dur des affirmations et des sources",
+    )
 
     st.subheader(f"Verdict : {result['verdict']}")
 
@@ -355,19 +391,21 @@ if analyser:
             st.success("Aucune fragilité majeure repérée par l'heuristique.")
 
     st.subheader("Fact-checking dur par affirmation")
-    claims_df = pd.DataFrame([
-        {
-            "Affirmation": c.text,
-            "Statut": c.status,
-            "Vérifiabilité /20": c.verifiability,
-            "Risque /20": c.risk,
-            "Nombre": "Oui" if c.has_number else "Non",
-            "Date": "Oui" if c.has_date else "Non",
-            "Nom propre": "Oui" if c.has_named_entity else "Non",
-            "Source attribuée": "Oui" if c.has_source_cue else "Non",
-        }
-        for c in result["claims"]
-    ])
+    claims_df = pd.DataFrame(
+        [
+            {
+                "Affirmation": c.text,
+                "Statut": c.status,
+                "Vérifiabilité /20": c.verifiability,
+                "Risque /20": c.risk,
+                "Nombre": "Oui" if c.has_number else "Non",
+                "Date": "Oui" if c.has_date else "Non",
+                "Nom propre": "Oui" if c.has_named_entity else "Non",
+                "Source attribuée": "Oui" if c.has_source_cue else "Non",
+            }
+            for c in result["claims"]
+        ]
+    )
 
     if not claims_df.empty:
         st.dataframe(claims_df, use_container_width=True, hide_index=True)
@@ -375,59 +413,6 @@ if analyser:
         st.info("Collez un texte un peu plus long pour obtenir une cartographie fine des affirmations.")
 else:
     st.info("Collez un texte puis cliquez sur « 🔍 Analyser l'article ».")
-
-col1, col2, col3 = st.columns(3)
-col1.metric("Score classique", result["M"], help="M = (G + N) − D")
-col2.metric("Score amélioré", result["improved"], help="Ajout de V et pénalité R")
-col3.metric("Hard Fact Score", result["hard_fact_score"], help="Contrôle plus dur des affirmations et des sources")
-
-st.subheader(f"Verdict : {result['verdict']}")
-
-m1, m2, m3, m4 = st.columns(4)
-m1.metric("G — gnōsis", result["G"])
-m2.metric("N — nous", result["N"])
-m3.metric("D — doxa", result["D"])
-m4.metric("V — vérifiabilité", result["V"])
-
-m5, m6, m7, m8 = st.columns(4)
-m5.metric("Qualité des sources", result["source_quality"])
-m6.metric("Risque moyen des claims", result["avg_claim_risk"])
-m7.metric("Vérifiabilité moyenne", result["avg_claim_verifiability"])
-m8.metric("Red flags", len(result["red_flags"]))
-
-with st.expander("Forces détectées", expanded=True):
-    if result["strengths"]:
-        for item in result["strengths"]:
-            st.success(item)
-    else:
-        st.info("Peu de signaux forts repérés.")
-
-with st.expander("Fragilités détectées", expanded=True):
-    if result["weaknesses"]:
-        for item in result["weaknesses"]:
-            st.error(item)
-    else:
-        st.success("Aucune fragilité majeure repérée par l'heuristique.")
-
-st.subheader("Fact-checking dur par affirmation")
-claims_df = pd.DataFrame([
-    {
-        "Affirmation": c.text,
-        "Statut": c.status,
-        "Vérifiabilité /20": c.verifiability,
-        "Risque /20": c.risk,
-        "Nombre": "Oui" if c.has_number else "Non",
-        "Date": "Oui" if c.has_date else "Non",
-        "Nom propre": "Oui" if c.has_named_entity else "Non",
-        "Source attribuée": "Oui" if c.has_source_cue else "Non",
-    }
-    for c in result["claims"]
-])
-
-if not claims_df.empty:
-    st.dataframe(claims_df, use_container_width=True, hide_index=True)
-else:
-    st.info("Collez un texte un peu plus long pour obtenir une cartographie fine des affirmations.")
 
 if show_method:
     st.subheader("Méthode")
