@@ -1,3 +1,4 @@
+from duckduckgo_search import DDGS
 from newspaper import Article
 import re
 from dataclasses import dataclass
