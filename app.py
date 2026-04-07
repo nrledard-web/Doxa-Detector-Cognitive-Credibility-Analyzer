@@ -72,7 +72,52 @@ def extract_article_from_url(url: str) -> str:
 
     except Exception:
         return ""
+def search_articles_by_keyword(keyword: str, max_results: int = 10):
+    results = []
+    try:
+        with DDGS() as ddgs:
+            search_results = ddgs.text(keyword, max_results=max_results)
+            for r in search_results:
+                results.append(
+                    {
+                        "title": r.get("title", ""),
+                        "url": r.get("href", ""),
+                        "source": r.get("body", ""),
+                    }
+                )
+    except Exception:
+        return []
 
+    return results
+
+
+def analyze_multiple_articles(keyword: str, max_results: int = 10):
+    found_articles = search_articles_by_keyword(keyword, max_results=max_results)
+    analyzed = []
+
+    for item in found_articles:
+        url = item.get("url", "").strip()
+        if not url:
+            continue
+
+        text = extract_article_from_url(url)
+        if not text:
+            continue
+
+        result = analyze_article(text)
+
+        analyzed.append(
+            {
+                "Titre": item.get("title", "Sans titre"),
+                "URL": url,
+                "Score classique": result["M"],
+                "Score amélioré": result["improved"],
+                "Hard Fact Score": result["hard_fact_score"],
+                "Verdict": result["verdict"],
+            }
+        )
+
+    return analyzed
 
 # -----------------------------
 # Moteur d'analyse
