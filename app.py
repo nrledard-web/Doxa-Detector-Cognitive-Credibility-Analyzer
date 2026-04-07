@@ -391,27 +391,42 @@ if analyser:
         result["hard_fact_score"],
         help="Contrôle plus dur des affirmations et des sources",
     )
-score = result["hard_fact_score"]
 
-if score <= 6:
-    couleur = "🔴"
-    etiquette = "Fragile"
-    message = "Le texte présente de fortes fragilités structurelles ou factuelles."
-elif score <= 11:
-    couleur = "🟠"
-    etiquette = "Douteux"
-    message = "Le texte contient quelques éléments crédibles, mais reste très incertain."
-elif score <= 15:
-    couleur = "🟡"
-    etiquette = "Plausible"
-    message = "Le texte paraît globalement plausible, mais demande encore vérification."
-else:
-    couleur = "🟢"
-    etiquette = "Robuste"
-    message = "Le texte présente une base structurelle et factuelle plutôt solide."
-st.markdown(f"## {couleur} Jauge de crédibilité : {etiquette}")
-st.progress(score / 20)
-st.caption(f"Score : {score}/20 — {message}")
+    if analyser:
+    result = analyze_article(article)
+
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Score classique", result["M"], help="M = (G + N) − D")
+    col2.metric("Score amélioré", result["improved"], help="Ajout de V et pénalité R")
+    col3.metric(
+        "Hard Fact Score",
+        result["hard_fact_score"],
+        help="Contrôle plus dur des affirmations et des sources",
+    )
+
+    score = result["hard_fact_score"]
+
+    if score <= 6:
+        couleur = "🔴"
+        etiquette = "Fragile"
+        message = "Le texte présente de fortes fragilités structurelles ou factuelles."
+    elif score <= 11:
+        couleur = "🟠"
+        etiquette = "Douteux"
+        message = "Le texte contient quelques éléments crédibles, mais reste très incertain."
+    elif score <= 15:
+        couleur = "🟡"
+        etiquette = "Plausible"
+        message = "Le texte paraît globalement plausible, mais demande encore vérification."
+    else:
+        couleur = "🟢"
+        etiquette = "Robuste"
+        message = "Le texte présente une base structurelle et factuelle plutôt solide."
+
+    st.subheader(f"{couleur} Jauge de crédibilité : {etiquette}")
+    st.progress(score / 20)
+    st.caption(f"Score : {score}/20 — {message}")
+
     st.subheader(f"Verdict : {result['verdict']}")
 
     m1, m2, m3, m4 = st.columns(4)
@@ -419,7 +434,6 @@ st.caption(f"Score : {score}/20 — {message}")
     m2.metric("N — nous", result["N"])
     m3.metric("D — doxa", result["D"])
     m4.metric("V — vérifiabilité", result["V"])
-
     m5, m6, m7, m8 = st.columns(4)
     m5.metric("Qualité des sources", result["source_quality"])
     m6.metric("Risque moyen des claims", result["avg_claim_risk"])
