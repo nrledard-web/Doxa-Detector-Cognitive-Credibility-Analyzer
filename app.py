@@ -355,7 +355,7 @@ if "article" not in st.session_state:
 
 if use_sample:
     st.session_state.article = SAMPLE_ARTICLE
-url = st.text_input("Analyser un article par URL")
+ url = st.text_input("Analyser un article par URL")
 
 if st.button("🌐 Charger l'article depuis l'URL"):
     if url:
@@ -364,7 +364,6 @@ if st.button("🌐 Charger l'article depuis l'URL"):
             st.session_state.article = texte
         else:
             st.error("Impossible de récupérer le texte de cette URL.")
-         
 article = st.text_area(
     "Collez ici un article, un post, un communiqué ou un texte journalistique",
     value=st.session_state.article,
