@@ -1,3 +1,7 @@
 streamlit
 pandas
 numpy
+streamlit
+pandas
+lxml[html_clean]
+newspaper3k
