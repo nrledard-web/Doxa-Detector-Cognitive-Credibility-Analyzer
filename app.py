@@ -409,7 +409,6 @@ else:
     couleur = "🟢"
     etiquette = "Robuste"
     message = "Le texte présente une base structurelle et factuelle plutôt solide."
-
 st.markdown(f"## {couleur} Jauge de crédibilité : {etiquette}")
 st.progress(score / 20)
 st.caption(f"Score : {score}/20 — {message}")
