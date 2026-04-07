@@ -5,3 +5,5 @@ streamlit
 pandas
 lxml[html_clean]
 newspaper3k
+newspaper3k
+lxml[html_clean]
