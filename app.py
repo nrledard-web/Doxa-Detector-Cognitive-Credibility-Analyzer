@@ -19,20 +19,6 @@ SAMPLE_ARTICLE = """Titre : Une découverte historique va bouleverser la science
 
 Des chercheurs affirment avoir trouvé une substance naturelle capable de guérir presque toutes les maladies. Selon plusieurs experts, cette avancée serait cachée depuis des années par certaines industries. Tout le monde devrait s'inquiéter. Aucune source officielle n'a encore publié de données complètes, mais les témoignages sont troublants et les résultats sembleraient indiscutables.
 """ 
-col1, col2 = st.columns([4,1])
-
-with col1:
-    article = st.text_area(
-        "Article à analyser",
-        value=SAMPLE_ARTICLE,
-        height=250
-    )
-
-with col2:
-    analyser = st.button("Analyser")
-
-if analyser:
-    st.write("Analyse lancée")
 
 # -----------------------------
 # Utilitaires
