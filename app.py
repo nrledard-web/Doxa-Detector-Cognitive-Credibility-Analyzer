@@ -313,11 +313,68 @@ article = st.text_area(
     value=st.session_state.article,
     height=320,
 )
-if st.button("🔍 Analyser l'article"):
-    st.write("Analyse en cours...")
+
 st.session_state.article = article
 
-result = analyze_article(article)
+analyser = st.button("🔍 Analyser l'article", use_container_width=True)
+
+if analyser:
+    result = analyze_article(article)
+
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Score classique", result["M"], help="M = (G + N) − D")
+    col2.metric("Score amélioré", result["improved"], help="Ajout de V et pénalité R")
+    col3.metric("Hard Fact Score", result["hard_fact_score"], help="Contrôle plus dur des affirmations et des sources")
+
+    st.subheader(f"Verdict : {result['verdict']}")
+
+    m1, m2, m3, m4 = st.columns(4)
+    m1.metric("G — gnōsis", result["G"])
+    m2.metric("N — nous", result["N"])
+    m3.metric("D — doxa", result["D"])
+    m4.metric("V — vérifiabilité", result["V"])
+
+    m5, m6, m7, m8 = st.columns(4)
+    m5.metric("Qualité des sources", result["source_quality"])
+    m6.metric("Risque moyen des claims", result["avg_claim_risk"])
+    m7.metric("Vérifiabilité moyenne", result["avg_claim_verifiability"])
+    m8.metric("Red flags", len(result["red_flags"]))
+
+    with st.expander("Forces détectées", expanded=True):
+        if result["strengths"]:
+            for item in result["strengths"]:
+                st.success(item)
+        else:
+            st.info("Peu de signaux forts repérés.")
+
+    with st.expander("Fragilités détectées", expanded=True):
+        if result["weaknesses"]:
+            for item in result["weaknesses"]:
+                st.error(item)
+        else:
+            st.success("Aucune fragilité majeure repérée par l'heuristique.")
+
+    st.subheader("Fact-checking dur par affirmation")
+    claims_df = pd.DataFrame([
+        {
+            "Affirmation": c.text,
+            "Statut": c.status,
+            "Vérifiabilité /20": c.verifiability,
+            "Risque /20": c.risk,
+            "Nombre": "Oui" if c.has_number else "Non",
+            "Date": "Oui" if c.has_date else "Non",
+            "Nom propre": "Oui" if c.has_named_entity else "Non",
+            "Source attribuée": "Oui" if c.has_source_cue else "Non",
+        }
+        for c in result["claims"]
+    ])
+
+    if not claims_df.empty:
+        st.dataframe(claims_df, use_container_width=True, hide_index=True)
+    else:
+        st.info("Collez un texte un peu plus long pour obtenir une cartographie fine des affirmations.")
+else:
+    st.info("Collez un texte puis cliquez sur « 🔍 Analyser l'article ».")
 
 col1, col2, col3 = st.columns(3)
 col1.metric("Score classique", result["M"], help="M = (G + N) − D")
