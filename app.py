@@ -11,8 +11,8 @@ st.set_page_config(
     page_icon="🧠",
     layout="wide",
 )
-import streamlit as st
 
+# bannière de l'application
 st.image("banner.png", use_container_width=True)
 
 SAMPLE_ARTICLE = """Titre : Une découverte historique va bouleverser la science pour toujours
