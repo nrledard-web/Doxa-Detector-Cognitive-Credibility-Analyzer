@@ -433,7 +433,7 @@ def analyze_article(text: str) -> Dict:
 # -----------------------------
 # Interface
 # -----------------------------
-st.title("🧠 Mécroyance Lab — Crédibilité d'article & fact-checking")
+st.title(translations[lang]["title"])
 st.caption("Votre formule comme boussole, un contrôle plus sévère comme garde-frontière.")
 
 with st.sidebar:
@@ -459,9 +459,9 @@ if use_sample:
 
 st.subheader("Analyse de plusieurs articles par sujet")
 
-keyword = st.text_input("Sujet à analyser", placeholder="ex : intelligence artificielle")
+keyword = st.text_input(translations[lang]["topic"], placeholder="ex : intelligence artificielle")
 
-if st.button("📰 Analyser 10 articles sur ce sujet", key="analyze_topic"):
+if st.button(translations[lang]["analyze_topic"], key="analyze_topic"):
     if keyword.strip():
         st.info("Recherche et analyse des articles en cours...")
         multiple_results = analyze_multiple_articles(keyword.strip(), max_results=10)
@@ -506,9 +506,9 @@ if st.button("📰 Analyser 10 articles sur ce sujet", key="analyze_topic"):
     else:
         st.warning("Entrez d'abord un mot-clé ou un sujet.")
 
-url = st.text_input("Analyser un article par URL")
+url = st.text_input(translations[lang]["url"])
 
-if st.button("🌐 Charger l'article depuis l'URL", key="load_url"):
+if st.button(translations[lang]["load_url"], key="load_url"):
     if url:
         texte = extract_article_from_url(url)
         if texte:
@@ -520,7 +520,7 @@ if st.button("🌐 Charger l'article depuis l'URL", key="load_url"):
         st.warning("Collez d'abord une URL.")
 
 article = st.text_area(
-    "Collez ici un article, un post, un communiqué ou un texte journalistique",
+    translations[lang]["paste"],
     value=st.session_state.article,
     height=320,
 )
@@ -528,7 +528,7 @@ article = st.text_area(
 st.session_state.article = article
 
 analyser = st.button(
-    "🔍 Analyser l'article",
+    translations[lang]["analyze"],
     use_container_width=True,
     type="primary",
     key="analyze_single",
@@ -569,7 +569,8 @@ if analyser:
     st.progress(score / 20)
     st.caption(f"Score : {score}/20 — {message}")
 
-    st.subheader(f"Verdict : {result['verdict']}")
+    st.subheader(f"{translations[lang]['verdict']} : {result['verdict']}")
+    st.subheader(translations[lang]["summary"])
 
     m1, m2, m3, m4 = st.columns(4)
     m1.metric("G — gnōsis", result["G"])
