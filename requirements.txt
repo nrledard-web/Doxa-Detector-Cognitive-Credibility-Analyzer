@@ -5,3 +5,4 @@ streamlit
 pandas
 lxml[html_clean]
 newspaper3k
+duckduckgo-search
