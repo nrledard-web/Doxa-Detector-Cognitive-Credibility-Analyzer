@@ -313,6 +313,8 @@ article = st.text_area(
     value=st.session_state.article,
     height=320,
 )
+if st.button("🔍 Analyser l'article"):
+    st.write("Analyse en cours...")
 st.session_state.article = article
 
 result = analyze_article(article)
