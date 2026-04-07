@@ -13,6 +13,58 @@ st.set_page_config(
     layout="wide",
 )
 
+translations = {
+    "Français": {
+        "title": "🧠 Mécroyance Lab — Analyse de crédibilité",
+        "analyze": "🔍 Analyser l'article",
+        "topic": "Sujet à analyser",
+        "analyze_topic": "📰 Analyser 10 articles sur ce sujet",
+        "url": "Analyser un article par URL",
+        "load_url": "🌐 Charger l'article depuis l'URL",
+        "paste": "Collez ici un article ou un texte",
+        "verdict": "Verdict",
+        "summary": "Résumé de l'analyse",
+    },
+    "English": {
+        "title": "🧠 Mecroyance Lab — Credibility Analyzer",
+        "analyze": "🔍 Analyze article",
+        "topic": "Topic to analyze",
+        "analyze_topic": "📰 Analyze 10 articles on this topic",
+        "url": "Analyze article from URL",
+        "load_url": "🌐 Load article from URL",
+        "paste": "Paste an article or text here",
+        "verdict": "Verdict",
+        "summary": "Analysis summary",
+    },
+    "Español": {
+        "title": "🧠 Laboratorio de Mecroyancia — Analizador de credibilidad",
+        "analyze": "🔍 Analizar artículo",
+        "topic": "Tema a analizar",
+        "analyze_topic": "📰 Analizar 10 artículos sobre este tema",
+        "url": "Analizar artículo desde URL",
+        "load_url": "🌐 Cargar artículo desde URL",
+        "paste": "Pegue aquí un artículo o texto",
+        "verdict": "Veredicto",
+        "summary": "Resumen del análisis",
+    },
+    "Filipino": {
+        "title": "🧠 Mecroyance Lab — Pagsusuri ng Kredibilidad",
+        "analyze": "🔍 Suriin ang artikulo",
+        "topic": "Paksa na susuriin",
+        "analyze_topic": "📰 Suriin ang 10 artikulo tungkol sa paksang ito",
+        "url": "Suriin ang artikulo mula sa URL",
+        "load_url": "🌐 Kunin ang artikulo mula sa URL",
+        "paste": "Ilagay dito ang artikulo o teksto",
+        "verdict": "Hatol",
+        "summary": "Buod ng pagsusuri",
+    },
+}
+
+lang = st.sidebar.selectbox(
+    "Language / Langue / Idioma",
+    ["Français", "English", "Español", "Filipino"]
+)
+
 # bannière de l'application
 st.image("banner.png", use_container_width=True)
 
@@ -20,7 +72,6 @@ SAMPLE_ARTICLE = """Titre : Une découverte historique va bouleverser la science
 
 Des chercheurs affirment avoir trouvé une substance naturelle capable de guérir presque toutes les maladies. Selon plusieurs experts, cette avancée serait cachée depuis des années par certaines industries. Tout le monde devrait s'inquiéter. Aucune source officielle n'a encore publié de données complètes, mais les témoignages sont troublants et les résultats sembleraient indiscutables.
 """
-
 
 # -----------------------------
 # Utilitaires
