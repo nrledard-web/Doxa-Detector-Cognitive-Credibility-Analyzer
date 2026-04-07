@@ -402,7 +402,23 @@ if "article" not in st.session_state:
 
 if use_sample:
     st.session_state.article = SAMPLE_ARTICLE
+st.subheader("Analyse de plusieurs articles par sujet")
 
+keyword = st.text_input("Sujet à analyser", placeholder="ex : intelligence artificielle")
+
+if st.button("📰 Analyser 10 articles sur ce sujet"):
+    if keyword.strip():
+        st.info("Recherche et analyse des articles en cours...")
+        multiple_results = analyze_multiple_articles(keyword.strip(), max_results=10)
+
+        if multiple_results:
+            df_multi = pd.DataFrame(multiple_results)
+            st.success(f"{len(df_multi)} articles analysés.")
+            st.dataframe(df_multi, use_container_width=True, hide_index=True)
+        else:
+            st.warning("Aucun article exploitable trouvé pour ce sujet.")
+    else:
+        st.warning("Entrez d'abord un mot-clé ou un sujet.")
 url = st.text_input("Analyser un article par URL")
 
 if st.button("🌐 Charger l'article depuis l'URL"):
