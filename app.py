@@ -433,7 +433,7 @@ def analyze_article(text: str) -> Dict:
 # -----------------------------
 # Interface
 # -----------------------------
-st.title("🧠 Mécroyance Lab — Crédibilité d'article & fact-checking dur")
+st.title("🧠 Mécroyance Lab — Crédibilité d'article & fact-checking")
 st.caption("Votre formule comme boussole, un contrôle plus sévère comme garde-frontière.")
 
 with st.sidebar:
