@@ -391,7 +391,28 @@ if analyser:
         result["hard_fact_score"],
         help="Contrôle plus dur des affirmations et des sources",
     )
+score = result["hard_fact_score"]
 
+if score <= 6:
+    couleur = "🔴"
+    etiquette = "Fragile"
+    message = "Le texte présente de fortes fragilités structurelles ou factuelles."
+elif score <= 11:
+    couleur = "🟠"
+    etiquette = "Douteux"
+    message = "Le texte contient quelques éléments crédibles, mais reste très incertain."
+elif score <= 15:
+    couleur = "🟡"
+    etiquette = "Plausible"
+    message = "Le texte paraît globalement plausible, mais demande encore vérification."
+else:
+    couleur = "🟢"
+    etiquette = "Robuste"
+    message = "Le texte présente une base structurelle et factuelle plutôt solide."
+
+st.markdown(f"## {couleur} Jauge de crédibilité : {etiquette}")
+st.progress(score / 20)
+st.caption(f"Score : {score}/20 — {message}")
     st.subheader(f"Verdict : {result['verdict']}")
 
     m1, m2, m3, m4 = st.columns(4)
