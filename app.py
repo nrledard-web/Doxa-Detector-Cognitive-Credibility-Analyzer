@@ -392,18 +392,6 @@ if analyser:
         help="Contrôle plus dur des affirmations et des sources",
     )
 
-    if analyser:
-    result = analyze_article(article)
-
-    col1, col2, col3 = st.columns(3)
-    col1.metric("Score classique", result["M"], help="M = (G + N) − D")
-    col2.metric("Score amélioré", result["improved"], help="Ajout de V et pénalité R")
-    col3.metric(
-        "Hard Fact Score",
-        result["hard_fact_score"],
-        help="Contrôle plus dur des affirmations et des sources",
-    )
-
     score = result["hard_fact_score"]
 
     if score <= 6:
@@ -434,6 +422,7 @@ if analyser:
     m2.metric("N — nous", result["N"])
     m3.metric("D — doxa", result["D"])
     m4.metric("V — vérifiabilité", result["V"])
+
     m5, m6, m7, m8 = st.columns(4)
     m5.metric("Qualité des sources", result["source_quality"])
     m6.metric("Risque moyen des claims", result["avg_claim_risk"])
