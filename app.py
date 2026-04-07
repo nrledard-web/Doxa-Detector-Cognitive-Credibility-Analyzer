@@ -1,5 +1,3 @@
-import streamlit as st
-st.image("banner.png", use_container_width=True)
 import re
 import math
 from dataclasses import dataclass
