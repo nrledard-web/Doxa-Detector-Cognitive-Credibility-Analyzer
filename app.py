@@ -411,10 +411,61 @@ if st.button("📰 Analyser 10 articles sur ce sujet"):
         st.info("Recherche et analyse des articles en cours...")
         multiple_results = analyze_multiple_articles(keyword.strip(), max_results=10)
 
-        if multiple_results:
-            df_multi = pd.DataFrame(multiple_results)
-            st.success(f"{len(df_multi)} articles analysés.")
-            st.dataframe(df_multi, use_container_width=True, hide_index=True)
+if multiple_results:
+
+    df_multi = pd.DataFrame(multiple_results)
+
+    # tri du plus crédible au moins crédible
+    df_multi = df_multi.sort_values("Hard Fact Score", ascending=False)
+
+    st.success(f"{len(df_multi)} articles analysés.")
+
+    # -----------------------------
+    # résumé du sujet
+    # -----------------------------
+    moyenne_hf = round(df_multi["Hard Fact Score"].mean(), 1)
+    moyenne_classique = round(df_multi["Score classique"].mean(), 1)
+
+    c1, c2, c3 = st.columns(3)
+
+    c1.metric("Articles analysés", len(df_multi))
+    c2.metric("Moyenne Hard Fact", moyenne_hf)
+    c3.metric("Moyenne score classique", moyenne_classique)
+
+    # -----------------------------
+    # indice de doxa
+    # -----------------------------
+    ecart_type_hf = round(df_multi["Hard Fact Score"].std(), 2)
+
+    if ecart_type_hf < 1.5:
+        indice_doxa = "Élevé"
+    elif ecart_type_hf < 3:
+        indice_doxa = "Moyen"
+    else:
+        indice_doxa = "Faible"
+
+    st.metric("Indice de doxa du sujet", indice_doxa)
+
+    # -----------------------------
+    # graphique de dispersion
+    # -----------------------------
+    st.subheader("Dispersion des scores de crédibilité")
+
+    df_plot = df_multi.copy()
+    df_plot["Article"] = [f"Article {i+1}" for i in range(len(df_plot))]
+
+    st.bar_chart(df_plot.set_index("Article")["Hard Fact Score"])
+
+    # -----------------------------
+    # tableau complet
+    # -----------------------------
+    st.subheader("Détail des articles analysés")
+
+    st.dataframe(
+        df_multi,
+        use_container_width=True,
+        hide_index=True,
+    )
         else:
             st.warning("Aucun article exploitable trouvé pour ce sujet.")
     else:
