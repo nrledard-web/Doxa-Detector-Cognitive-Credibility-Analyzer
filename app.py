@@ -57,6 +57,22 @@ def split_into_claims(text: str) -> List[str]:
     return claims[:20]
 
 
+def extract_article_from_url(url: str) -> str:
+    try:
+        article = Article(url)
+        article.download()
+        article.parse()
+
+        text = article.text.strip()
+
+        if article.title:
+            return "Titre : " + article.title + "\n\n" + text
+        return text
+
+    except Exception:
+        return ""
+
+
 # -----------------------------
 # Moteur d'analyse
 # -----------------------------
@@ -312,22 +328,7 @@ def analyze_article(text: str) -> Dict:
         "claims": claims,
         "red_flags": red_flags,
     }
-from newspaper import Article
 
-def extract_article_from_url(url):
-    try:
-        article = Article(url)
-        article.download()
-        article.parse()
-
-        text = article.text
-
-        if article.title:
-            return "Titre : " + article.title + "\n\n" + text
-        return text
-
-    except:
-        return ""
 
 # -----------------------------
 # Interface
@@ -355,15 +356,20 @@ if "article" not in st.session_state:
 
 if use_sample:
     st.session_state.article = SAMPLE_ARTICLE
- url = st.text_input("Analyser un article par URL")
+
+url = st.text_input("Analyser un article par URL")
 
 if st.button("🌐 Charger l'article depuis l'URL"):
     if url:
         texte = extract_article_from_url(url)
         if texte:
             st.session_state.article = texte
+            st.success("Article chargé depuis l'URL.")
         else:
             st.error("Impossible de récupérer le texte de cette URL.")
+    else:
+        st.warning("Collez d'abord une URL.")
+
 article = st.text_area(
     "Collez ici un article, un post, un communiqué ou un texte journalistique",
     value=st.session_state.article,
@@ -436,7 +442,7 @@ if analyser:
     else:
         st.info("Collez un texte un peu plus long pour obtenir une cartographie fine des affirmations.")
 else:
-    st.info("Collez un texte puis cliquez sur « 🔍 Analyser l'article ».")
+    st.info("Collez un texte ou chargez une URL, puis cliquez sur « 🔍 Analyser l'article ».")
 
 if show_method:
     st.subheader("Méthode")
