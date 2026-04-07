@@ -72,6 +72,8 @@ def extract_article_from_url(url: str) -> str:
 
     except Exception:
         return ""
+
+
 def search_articles_by_keyword(keyword: str, max_results: int = 10):
     results = []
     try:
@@ -118,6 +120,7 @@ def analyze_multiple_articles(keyword: str, max_results: int = 10):
         )
 
     return analyzed
+
 
 # -----------------------------
 # Moteur d'analyse
@@ -402,77 +405,59 @@ if "article" not in st.session_state:
 
 if use_sample:
     st.session_state.article = SAMPLE_ARTICLE
+
 st.subheader("Analyse de plusieurs articles par sujet")
 
 keyword = st.text_input("Sujet à analyser", placeholder="ex : intelligence artificielle")
 
-if st.button("📰 Analyser 10 articles sur ce sujet"):
+if st.button("📰 Analyser 10 articles sur ce sujet", key="analyze_topic"):
     if keyword.strip():
         st.info("Recherche et analyse des articles en cours...")
         multiple_results = analyze_multiple_articles(keyword.strip(), max_results=10)
 
-if multiple_results:
+        if multiple_results:
+            df_multi = pd.DataFrame(multiple_results)
 
-    df_multi = pd.DataFrame(multiple_results)
+            # tri du plus crédible au moins crédible
+            df_multi = df_multi.sort_values("Hard Fact Score", ascending=False)
 
-    # tri du plus crédible au moins crédible
-    df_multi = df_multi.sort_values("Hard Fact Score", ascending=False)
+            st.success(f"{len(df_multi)} articles analysés.")
 
-    st.success(f"{len(df_multi)} articles analysés.")
+            moyenne_hf = round(df_multi["Hard Fact Score"].mean(), 1)
+            moyenne_classique = round(df_multi["Score classique"].mean(), 1)
 
-    # -----------------------------
-    # résumé du sujet
-    # -----------------------------
-    moyenne_hf = round(df_multi["Hard Fact Score"].mean(), 1)
-    moyenne_classique = round(df_multi["Score classique"].mean(), 1)
+            c1, c2, c3 = st.columns(3)
+            c1.metric("Articles analysés", len(df_multi))
+            c2.metric("Moyenne Hard Fact", moyenne_hf)
+            c3.metric("Moyenne score classique", moyenne_classique)
 
-    c1, c2, c3 = st.columns(3)
+            ecart_type_hf = round(df_multi["Hard Fact Score"].std(), 2)
 
-    c1.metric("Articles analysés", len(df_multi))
-    c2.metric("Moyenne Hard Fact", moyenne_hf)
-    c3.metric("Moyenne score classique", moyenne_classique)
+            if ecart_type_hf < 1.5:
+                indice_doxa = "Élevé"
+            elif ecart_type_hf < 3:
+                indice_doxa = "Moyen"
+            else:
+                indice_doxa = "Faible"
 
-    # -----------------------------
-    # indice de doxa
-    # -----------------------------
-    ecart_type_hf = round(df_multi["Hard Fact Score"].std(), 2)
+            st.metric("Indice de doxa du sujet", indice_doxa)
 
-    if ecart_type_hf < 1.5:
-        indice_doxa = "Élevé"
-    elif ecart_type_hf < 3:
-        indice_doxa = "Moyen"
-    else:
-        indice_doxa = "Faible"
+            st.subheader("Dispersion des scores de crédibilité")
 
-    st.metric("Indice de doxa du sujet", indice_doxa)
+            df_plot = df_multi.copy()
+            df_plot["Article"] = [f"Article {i+1}" for i in range(len(df_plot))]
+            st.bar_chart(df_plot.set_index("Article")["Hard Fact Score"])
 
-    # -----------------------------
-    # graphique de dispersion
-    # -----------------------------
-    st.subheader("Dispersion des scores de crédibilité")
-
-    df_plot = df_multi.copy()
-    df_plot["Article"] = [f"Article {i+1}" for i in range(len(df_plot))]
-
-    st.bar_chart(df_plot.set_index("Article")["Hard Fact Score"])
-
-    # -----------------------------
-    # tableau complet
-    # -----------------------------
-    st.subheader("Détail des articles analysés")
-
-    st.dataframe(
-        df_multi,
-        use_container_width=True,
-        hide_index=True,
-    )
+            st.subheader("Détail des articles analysés")
+            st.dataframe(df_multi, use_container_width=True, hide_index=True)
         else:
             st.warning("Aucun article exploitable trouvé pour ce sujet.")
     else:
         st.warning("Entrez d'abord un mot-clé ou un sujet.")
+
 url = st.text_input("Analyser un article par URL")
 
-if st.button("🌐 Charger l'article depuis l'URL"):
+if st.button("🌐 Charger l'article depuis l'URL", key="load_url"):
     if url:
         texte = extract_article_from_url(url)
         if texte:
@@ -491,7 +476,12 @@ article = st.text_area(
 
 st.session_state.article = article
 
-analyser = st.button("🔍 Analyser l'article", use_container_width=True, type="primary")
+analyser = st.button(
+    "🔍 Analyser l'article",
+    use_container_width=True,
+    type="primary",
+    key="analyze_single",
+)
 
 if analyser:
     result = analyze_article(article)
