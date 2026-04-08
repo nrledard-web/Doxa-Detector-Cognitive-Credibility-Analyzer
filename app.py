@@ -861,7 +861,7 @@ def analyze_article(text: str) -> Dict:
 # Interface
 # -----------------------------
 st.title(translations[lang]["title"])
-    st.caption(translations[lang]["tagline"])
+st.caption(translations[lang]["tagline"])
 
 with st.sidebar:
     st.header(translations[lang]["settings"])
@@ -899,7 +899,7 @@ if st.button(translations[lang]["analyze_topic"], key="analyze_topic"):
             # tri du plus crédible au moins crédible
             df_multi = df_multi.sort_values("Hard Fact Score", ascending=False)
 
-            st.success(f"{len(df_multi)} {translations[lang]["articles_analyzed"]}")
+            st.success(f"{len(df_multi)} {translations[lang]['articles_analyzed']}")
 
             moyenne_hf = round(df_multi["Hard Fact Score"].mean(), 1)
             moyenne_classique = round(df_multi["Score classique"].mean(), 1)
@@ -923,7 +923,7 @@ if st.button(translations[lang]["analyze_topic"], key="analyze_topic"):
             st.subheader(translations[lang]["credibility_score_dispersion"])
 
             df_plot = df_multi.copy()
-            df_plot["Article"] = [f"{translations[lang]["article_label"]} {i+1}" for i in range(len(df_plot))]
+            df_plot["Article"] = [f"{translations[lang]['article_label']} {i+1}" for i in range(len(df_plot))]
             st.bar_chart(df_plot.set_index("Article")["Hard Fact Score"])
 
             st.subheader(translations[lang]["analyzed_articles_details"])
@@ -992,9 +992,9 @@ if analyser:
         etiquette = translations[lang]["robust"]
         message = translations[lang]["robust_message"]
 
-    st.subheader(f"{couleur} {translations[lang]["credibility_gauge"]} : {etiquette}")
+    st.subheader(f"{couleur} {translations[lang]['credibility_gauge']} : {etiquette}")
     st.progress(score / 20)
-    st.caption(f"{translations[lang]["score"]} : {score}/20 — {message}")
+    st.caption(f"{translations[lang]['score']} : {score}/20 — {message}")
 
     st.subheader(f"{translations[lang]['verdict']} : {result['verdict']}")
     st.subheader(translations[lang]["summary"])
@@ -1031,8 +1031,8 @@ if analyser:
             {
                 translations[lang]["claim"]: c.text,
                 translations[lang]["status"]: c.status,
-                f"{translations[lang]["verifiability"]} /20": c.verifiability,
-                f"{translations[lang]["risk"]} /20": c.risk,
+                f"{translations[lang]['verifiability']} /20": c.verifiability,
+                f"{translations[lang]['risk']} /20": c.risk,
                 translations[lang]["number"]: translations[lang]["yes"] if c.has_number else translations[lang]["no"],
                 translations[lang]["date"]: translations[lang]["yes"] if c.has_date else translations[lang]["no"],
                 translations[lang]["named_entity"]: translations[lang]["yes"] if c.has_named_entity else translations[lang]["no"],
