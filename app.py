@@ -1,4 +1,4 @@
-from duckduckgo_search import DDGS
+from ddgs import DDGS  # Renommé depuis duckduckgo_search
 from newspaper import Article
 import re
 from dataclasses import dataclass
@@ -126,28 +126,77 @@ def extract_article_from_url(url: str) -> str:
 
 
 def search_articles_by_keyword(keyword: str, max_results: int = 10):
+    """
+    Moteur de recherche amélioré :
+    - Liste de domaines de confiance élargie (25+ sources)
+    - Requête plus flexible sans guillemets stricts autour du mot-clé
+    - Volume de résultats bruts multiplié par 5 pour augmenter les chances de trouver des domaines de confiance
+    - Utilise le nouveau package ddgs (anciennement duckduckgo_search)
+    """
     results = []
+
+    # Liste élargie de domaines de confiance (médias, institutions, presse internationale)
     trusted_domains = [
+        # Agences de presse internationales
         "reuters.com",
+        "apnews.com",
+        "afp.com",
+        # Médias anglophones
         "bbc.com",
-        "lemonde.fr",
-        "france24.com",
-        "elpais.com",
         "theguardian.com",
         "nytimes.com",
+        "washingtonpost.com",
+        "wsj.com",
+        "bloomberg.com",
+        "ft.com",
+        "cnn.com",
+        "npr.org",
+        "politico.com",
+        "politico.eu",
+        # Médias francophones
+        "lemonde.fr",
+        "france24.com",
+        "francetvinfo.fr",
+        "liberation.fr",
+        "lefigaro.fr",
+        "lesechos.fr",
+        "mediapart.fr",
+        "lepoint.fr",
+        "lexpress.fr",
+        "rfi.fr",
+        # Médias hispanophones
+        "elpais.com",
+        # Médias germanophones et internationaux
+        "spiegel.de",
+        "dw.com",
+        "aljazeera.com",
+        # Sources scientifiques et institutionnelles
+        "nature.com",
+        "science.org",
+        "thelancet.com",
+        "nejm.org",
+        "who.int",
+        "un.org",
+        "europa.eu",
     ]
 
     try:
-        query = f'"{keyword}" actualités article analyse news'
+        # Requête plus flexible : sans guillemets stricts, avec des termes booléens
+        # pour cibler des publications journalistiques ou scientifiques
+        query = f"{keyword} (actualités OR news OR article OR analyse OR reportage OR étude)"
+
         with DDGS() as ddgs:
-            search_results = ddgs.text(query, max_results=max_results * 3)
+            # On demande 5x plus de résultats bruts pour maximiser les chances
+            # de trouver des articles provenant des domaines de confiance
+            search_results = ddgs.text(query, max_results=max_results * 5)
 
             for r in search_results:
                 url = r.get("href", "")
                 if not url:
                     continue
 
-                if not any(domain in url for domain in trusted_domains):
+                # Vérification souple : le domaine est-il dans notre liste ?
+                if not any(domain in url.lower() for domain in trusted_domains):
                     continue
 
                 results.append(
@@ -161,7 +210,8 @@ def search_articles_by_keyword(keyword: str, max_results: int = 10):
                 if len(results) >= max_results:
                     break
 
-    except Exception:
+    except Exception as e:
+        st.warning(f"Erreur lors de la recherche : {e}")
         return []
 
     return results
