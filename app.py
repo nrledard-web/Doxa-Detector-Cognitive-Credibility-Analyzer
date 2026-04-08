@@ -127,17 +127,40 @@ def extract_article_from_url(url: str) -> str:
 
 def search_articles_by_keyword(keyword: str, max_results: int = 10):
     results = []
+    trusted_domains = [
+        "reuters.com",
+        "bbc.com",
+        "lemonde.fr",
+        "france24.com",
+        "elpais.com",
+        "theguardian.com",
+        "nytimes.com",
+    ]
+
     try:
+        query = f'"{keyword}" actualités article analyse news'
         with DDGS() as ddgs:
-            search_results = ddgs.text(keyword, max_results=max_results)
+            search_results = ddgs.text(query, max_results=max_results * 3)
+
             for r in search_results:
+                url = r.get("href", "")
+                if not url:
+                    continue
+
+                if not any(domain in url for domain in trusted_domains):
+                    continue
+
                 results.append(
                     {
                         "title": r.get("title", ""),
-                        "url": r.get("href", ""),
+                        "url": url,
                         "source": r.get("body", ""),
                     }
                 )
+
+                if len(results) >= max_results:
+                    break
+
     except Exception:
         return []
 
