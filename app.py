@@ -13,9 +13,6 @@ st.set_page_config(
     layout="wide",
 )
 
-# -----------------------------
-# Dictionnaire de traduction
-# -----------------------------
 translations = {
     "Français": {
         "title": "🧠 Mécroyance Lab — Analyse de crédibilité",
@@ -120,24 +117,6 @@ translations = {
         "strong_credibility": "Crédibilité forte",
         "yes": "Oui",
         "no": "Non",
-        "llm_analysis": "Analyse de Mécroyance pour LLM",
-        "llm_intro": "Cette section applique les modèles dérivés du traité pour évaluer la posture cognitive d'un système (IA ou humain).",
-        "overconfidence": "Surconfiance (Asymétrie)",
-        "calibration": "Calibration relative (Ratio)",
-        "revisability": "Révisabilité (R)",
-        "cognitive_closure": "Clôture cognitive",
-        "cognitive_potential": "Potentiel cognitif",
-        "cognitive_field": "Champ cognitif (Attracteur)",
-        "cognitive_curvature": "Courbure cognitive (κ)",
-        "interpretation": "Interprétation",
-        "llm_metrics": "Métriques LLM",
-        "zone_closure": "Zone de clôture cognitive : la certitude excède l’ancrage cognitif.",
-        "zone_stability": "Zone de stabilité révisable : la mécroyance accompagne sans dominer.",
-        "zone_lucidity": "Zone de lucidité croissante : le doute structure la cognition.",
-        "zone_rare": "Zone rare : cognition hautement intégrée et réflexive.",
-        "zone_pansapience": "Pan-sapience hypothétique : horizon limite d’une cognition presque totalement révisable.",
-        "zone_asymptote": "Asymptote idéale : totalité du savoir et de l’intégration, sans rigidification.",
-        "out_of_spectrum": "Valeur hors spectre théorique.",
     },
     "English": {
         "title": "🧠 Mecroyance Lab — Credibility Analyzer",
@@ -211,100 +190,76 @@ translations = {
         "original_formula": "Original Formula",
         "articulated_knowledge_density": "G : articulated knowledge density — sources, figures, names, references, verifiable traces.",
         "integration": "N : integration — context, nuances, reservations, argumentative coherence.",
-        "assertive_rigidity": "D : assertive rigidity — unsupported certainties, emotional charge.",
+        "assertive_rigidity": "D : assertive rigidity — unsupported certainties, rhetorical exuberance, doxic inflation.",
         "improved_variant": "Improved Variant",
-        "addition_of_v_and_r": "Addition of V for verifiability and R as a rhetorical penalty.",
+        "addition_of_v_and_r": "Addition of V for verifiability and R as rhetorical penalty.",
         "hard_fact_checking_module": "Hard Fact-Checking Module",
         "claim_evaluation_criteria": "Each sentence is treated as a potential claim, then evaluated according to:",
-        "criteria_list": "- presence of dates, numbers, proper names,\n- presence of clear attribution,\n- degree of absolutism,\n- sensationalist charge,\n- probable quality of mentioned sources,\n- narrative red flags.",
+        "criteria_list": "- presence of dates, numbers, proper nouns,\n- presence of clear attribution,\n- degree of absolutism,\n- sensational charge,\n- probable quality of mentioned sources,\n- narrative red flags.",
         "practical_hard_fact_formula": "Practical Hard Fact Score Formula",
-        "qs": "QS: quality of sources",
-        "vc": "VC: average verifiability of claims",
-        "rc": "RC: average risk of claims",
-        "f": "F: number of red flags",
-        "disclaimer": "This app does not replace a real journalist, a real researcher, or a clerk of reality. But it already removes some masks from the parading text.",
+        "qs": "QS : quality of sources",
+        "vc": "VC : average verifiability of claims",
+        "rc": "RC : average risk of claims",
+        "f": "F : number of red flags",
+        "disclaimer": "This app does not replace a real journalist, a real researcher, or a reality clerk. But it already removes some masks from the parading text.",
         "presence_of_source_markers": "Presence of source or data markers",
-        "verifiability_clues": "Verifiability clues found: links, figures, dates or percentages",
-        "text_contains_nuances": "The text contains nuances, limits or counterpoints",
+        "verifiability_clues": "Verifiability clues identified: links, numbers, dates or percentages",
+        "text_contains_nuances": "The text contains nuances, limitations or counterpoints",
         "text_evokes_robust_sources": "The text evokes potentially robust or institutional sources",
         "some_claims_verifiable": "Some claims are well-anchored enough to be properly verified",
         "overly_assertive_language": "Overly assertive or absolutist language",
         "notable_emotional_sensational_charge": "Notable emotional or sensational charge",
         "almost_total_absence_of_verifiable_elements": "Almost total absence of verifiable elements",
         "text_too_short": "Text too short to seriously support a strong claim",
-        "multiple_claims_very_fragile": "Several central claims are very fragile given the present clues",
+        "multiple_claims_very_fragile": "Multiple central claims are very fragile given the present clues",
         "to_verify": "To verify",
         "rather_verifiable": "Rather verifiable",
         "very_fragile": "Very fragile",
-        "low_credibility": "Low credibility",
-        "prudent_credibility": "Prudent credibility",
-        "rather_credible": "Rather credible",
-        "strong_credibility": "Strong credibility",
-        "yes": "Yes",
-        "no": "No",
-        "llm_analysis": "Mecroyance Analysis for LLM",
-        "llm_intro": "This section applies derived models from the treatise to evaluate the cognitive posture of a system (AI or human).",
-        "overconfidence": "Overconfidence (Asymmetry)",
-        "calibration": "Relative Calibration (Ratio)",
-        "revisability": "Revisability (R)",
-        "cognitive_closure": "Cognitive Closure",
-        "cognitive_potential": "Cognitive Potential",
-        "cognitive_field": "Cognitive Field (Attractor)",
-        "cognitive_curvature": "Cognitive Curvature (κ)",
-        "interpretation": "Interpretation",
-        "llm_metrics": "LLM Metrics",
-        "zone_closure": "Cognitive closure zone: certainty exceeds cognitive anchoring.",
-        "zone_stability": "Revisable stability zone: mecroyance accompanies without dominating.",
-        "zone_lucidity": "Increasing lucidity zone: doubt structures cognition.",
-        "zone_rare": "Rare zone: highly integrated and reflexive cognition.",
-        "zone_pansapience": "Hypothetical pan-sapience: limit horizon of an almost totally revisable cognition.",
-        "zone_asymptote": "Ideal asymptote: totality of knowledge and integration, without rigidification.",
-        "out_of_spectrum": "Value out of theoretical spectrum.",
     },
     "Español": {
-        "title": "🧠 Mecroyance Lab — Analizador de Credibilidad",
+        "title": "🧠 Laboratorio de Mecroyancia — Analizador de credibilidad",
         "analyze": "🔍 Analizar artículo",
         "topic": "Tema a analizar",
         "analyze_topic": "📰 Analizar 10 artículos sobre este tema",
-        "url": "Analizar artículo por URL",
+        "url": "Analizar artículo desde URL",
         "load_url": "🌐 Cargar artículo desde URL",
         "paste": "Pegue aquí un artículo o texto",
         "verdict": "Veredicto",
         "summary": "Resumen del análisis",
-        "tagline": "Su fórmula como brújula, un control más estricto como guardia fronterizo.",
-        "settings": "Ajustes",
+        "tagline": "Tu fórmula como brújula, un control más estricto como guardia fronterizo.",
+        "settings": "Configuración",
         "load_example": "Cargar ejemplo",
         "show_method": "Mostrar método",
-        "hard_fact_score_scale": "Escala del Hard Fact Score",
+        "hard_fact_score_scale": "Escala de Puntuación de Hechos Duros",
         "scale_0_5": "0–5 : muy frágil",
         "scale_6_9": "6–9 : dudoso",
-        "scale_10_14": "10–14 : plausible pero requiere contrastación",
+        "scale_10_14": "10–14 : plausible pero necesita verificación cruzada",
         "scale_15_20": "15–20 : estructuralmente robusto",
-        "analyze_multiple_articles_by_topic": "Análisis de múltiples artículos por tema",
+        "analyze_multiple_articles_by_topic": "Analizar múltiples artículos por tema",
         "searching_analyzing_articles": "Buscando y analizando artículos...",
         "articles_analyzed": "artículos analizados.",
         "analyzed_articles": "Artículos Analizados",
-        "avg_hard_fact": "Promedio Hard Fact",
-        "avg_classic_score": "Promedio Score Clásico",
-        "topic_doxa_index": "Índice de doxa del tema",
+        "avg_hard_fact": "Promedio Hecho Duro",
+        "avg_classic_score": "Promedio Puntuación Clásica",
+        "topic_doxa_index": "Índice de Doxa del Tema",
         "high": "Alto",
         "medium": "Medio",
         "low": "Bajo",
-        "credibility_score_dispersion": "Dispersión de puntuaciones de credibilidad",
+        "credibility_score_dispersion": "Dispersión de Puntuación de Credibilidad",
         "article_label": "Artículo",
-        "analyzed_articles_details": "Detalle de artículos analizados",
+        "analyzed_articles_details": "Detalles de los artículos analizados",
         "no_exploitable_articles_found": "No se encontraron artículos explotables para este tema.",
         "enter_keyword_first": "Ingrese primero una palabra clave o tema.",
-        "article_loaded_from_url": "Artículo cargado desde URL.",
+        "article_loaded_from_url": "Artículo cargado desde la URL.",
         "unable_to_retrieve_text": "No se pudo recuperar el texto de esta URL.",
         "paste_url_first": "Pegue primero una URL.",
-        "classic_score": "Score Clásico",
-        "improved_score": "Score Mejorado",
-        "hard_fact_score": "Hard Fact Score",
+        "classic_score": "Puntuación Clásica",
+        "improved_score": "Puntuación Mejorada",
+        "hard_fact_score": "Puntuación de Hechos Duros",
         "help_classic_score": "M = (G + N) − D",
         "help_improved_score": "Adición de V y penalización R",
         "help_hard_fact_score": "Control más estricto de afirmaciones y fuentes",
-        "credibility_gauge": "Indicador de credibilidad",
+        "credibility_gauge": "Medidor de Credibilidad",
         "fragile": "Frágil",
         "fragile_message": "El texto presenta fuertes debilidades estructurales o fácticas.",
         "doubtful": "Dudoso",
@@ -315,370 +270,534 @@ translations = {
         "robust_message": "El texto presenta una base estructural y fáctica bastante sólida.",
         "score": "Puntuación",
         "strengths_detected": "Fortalezas detectadas",
-        "few_strong_signals": "Pocos señales fuertes identificadas.",
+        "few_strong_signals": "Pocas señales fuertes identificadas.",
         "weaknesses_detected": "Debilidades detectadas",
-        "no_major_weakness": "No se identificaron debilidades mayores por heurística.",
-        "hard_fact_checking_by_claim": "Fact-checking duro por afirmación",
+        "no_major_weakness": "No se identificaron debilidades importantes por heurística.",
+        "hard_fact_checking_by_claim": "Verificación de hechos duros por afirmación",
         "claim": "Afirmación",
         "status": "Estado",
         "verifiability": "Verificabilidad",
         "risk": "Riesgo",
         "number": "Número",
         "date": "Fecha",
-        "named_entity": "Entidad nombrada",
-        "attributed_source": "Fuente atribuida",
+        "named_entity": "Entidad Nombrada",
+        "attributed_source": "Fuente Atribuida",
         "paste_longer_text": "Pegue un texto un poco más largo para obtener un mapeo fino de las afirmaciones.",
         "paste_text_or_load_url": "Pegue un texto o cargue una URL, luego haga clic en « 🔍 Analizar artículo ».",
         "method": "Método",
         "original_formula": "Fórmula Original",
         "articulated_knowledge_density": "G : densidad de conocimiento articulado — fuentes, cifras, nombres, referencias, rastros verificables.",
         "integration": "N : integración — contexto, matices, reservas, coherencia argumentativa.",
-        "assertive_rigidity": "D : rigidez asertiva — certezas no sustentadas, carga emocional.",
+        "assertive_rigidity": "D : rigidez asertiva — certezas no respaldadas, exuberancia retórica, inflación doxástica.",
         "improved_variant": "Variante Mejorada",
-        "addition_of_v_and_r": "Adición de V para verificabilidad y R como penalización retórica.",
-        "hard_fact_checking_module": "Módulo de Fact-Checking Duro",
+        "addition_of_v_and_r": "Adición de V para la verificabilidad y R como penalización retórica.",
+        "hard_fact_checking_module": "Módulo de Verificación de Hechos Duros",
         "claim_evaluation_criteria": "Cada oración se trata como una afirmación potencial, luego se evalúa según:",
-        "criteria_list": "- presencia de fechas, números, nombres propios,\n- presencia de atribución clara,\n- grado de absolutismo,\n- carga sensacionalista,\n- calidad probable de las fuentes mencionadas,\n- señales rojas narrativas.",
-        "practical_hard_fact_formula": "Fórmula Práctica del Hard Fact Score",
-        "qs": "QS: calidad de las fuentes",
-        "vc": "VC: verificabilidad promedio de las afirmaciones",
-        "rc": "RC: riesgo promedio de las afirmaciones",
-        "f": "F: número de banderas rojas",
-        "disclaimer": "Esta aplicación no reemplaza a un periodista real, un investigador real ni a un escribano de la realidad. Pero ya quita algunas máscaras al texto que desfila.",
-        "presence_of_source_markers": "Presencia de marcadores de fuentes o datos",
-        "verifiability_clues": "Pistas de verificabilidad encontradas: enlaces, cifras, fechas o porcentages",
-        "text_contains_nuances": "El texto contiene matices, límites o contrapuntos",
+        "criteria_list": "- presencia de fechas, números, nombres propios,\n- presencia de atribución clara,\n- grado de absolutismo,\n- carga sensacionalista,\n- calidad probable de las fuentes mencionadas,\n- señales de alerta narrativas.",
+        "practical_hard_fact_formula": "Fórmula Práctica de Puntuación de Hechos Duros",
+        "qs": "QS : calidad de las fuentes",
+        "vc": "VC : verificabilidad promedio de las afirmaciones",
+        "rc": "RC : riesgo promedio de las afirmaciones",
+        "f": "F : número de banderas rojas",
+        "disclaimer": "Esta aplicación no reemplaza a un periodista real, un investigador real o un secretario de la realidad. Pero ya quita algunas máscaras al texto que desfila.",
+        "presence_of_source_markers": "Presencia de marcadores de fuente o datos",
+        "verifiability_clues": "Pistas de verificabilidad identificadas: enlaces, números, fechas o porcentajes",
+        "text_contains_nuances": "El texto contiene matices, limitaciones o contrapuntos",
         "text_evokes_robust_sources": "El texto evoca fuentes potencialmente robustas o institucionales",
-        "some_claims_verifiable": "Algunas afirmaciones están lo suficientemente ancladas como para ser verificadas adecuadamente",
-        "overly_assertive_language": "Lenguaje demasiado asertivo o absolutista",
-        "notable_emotional_sensational_charge": "Carga emocional o sensacionalista notable",
+        "some_claims_verifiable": "Algunas afirmaciones están lo suficientemente bien ancladas para ser verificadas correctamente",
+        "overly_assertive_language": "Lenguaje excesivamente asertivo o absolutista",
+        "notable_emotional_sensational_charge": "Notable carga emocional o sensacionalista",
         "almost_total_absence_of_verifiable_elements": "Ausencia casi total de elementos verificables",
-        "text_too_short": "Texto demasiado corto para sustentar seriamente una afirmación fuerte",
-        "multiple_claims_very_fragile": "Varias afirmaciones centrales son muy frágiles dados los indicios presentes",
-        "to_verify": "Por verificar",
-        "rather_verifiable": "Bastante verificable",
+        "text_too_short": "Texto demasiado corto para respaldar seriamente una afirmación fuerte",
+        "multiple_claims_very_fragile": "Múltiples afirmaciones centrales son muy frágiles dadas las pistas presentes",
+        "to_verify": "A verificar",
+        "rather_verifiable": "Más bien verificable",
         "very_fragile": "Muy frágil",
-        "low_credibility": "Credibilidad baja",
-        "prudent_credibility": "Credibilidad prudente",
-        "rather_credible": "Bastante creíble",
-        "strong_credibility": "Credibilidad fuerte",
-        "yes": "Sí",
-        "no": "No",
-        "llm_analysis": "Análisis de Mecroyance para LLM",
-        "llm_intro": "Esta sección aplica modelos derivados del tratado para evaluar la postura cognitiva de un sistema (IA o humano).",
-        "overconfidence": "Sobreconfianza (Asimetría)",
-        "calibration": "Calibración relativa (Ratio)",
-        "revisability": "Revisabilidad (R)",
-        "cognitive_closure": "Cierre cognitivo",
-        "cognitive_potential": "Potencial cognitivo",
-        "cognitive_field": "Campo cognitivo (Atractor)",
-        "cognitive_curvature": "Curvatura cognitiva (κ)",
-        "interpretation": "Interpretación",
-        "llm_metrics": "Métricas LLM",
-        "zone_closure": "Zona de cierre cognitivo: la certeza excede el anclaje cognitivo.",
-        "zone_stability": "Zona de estabilidad revisable: la mecroyance acompaña sin dominar.",
-        "zone_lucidity": "Zona de lucidez creciente: la duda estructura la cognición.",
-        "zone_rare": "Zona rara: cognición altamente integrada y reflexiva.",
-        "zone_pansapience": "Pan-sapiencia hipotética: horizonte límite de una cognición casi totalmente revisable.",
-        "zone_asymptote": "Asíntota ideal: totalidad del conocimiento y la integración, sin rigidización.",
-        "out_of_spectrum": "Valor fuera del espectro teórico.",
     },
-    "Philippine": {
-        "title": "🧠 Mecroyance Lab — Credibility Analyzer",
+    "Filipino": {
+        "title": "🧠 Mecroyance Lab — Pagsusuri ng Kredibilidad",
         "analyze": "🔍 Suriin ang artikulo",
         "topic": "Paksa na susuriin",
-        "analyze_topic": "📰 Suriin ang 10 artikulo sa paksang ito",
+        "analyze_topic": "📰 Suriin ang 10 artikulo tungkol sa paksang ito",
         "url": "Suriin ang artikulo mula sa URL",
-        "load_url": "🌐 I-load ang artikulo mula sa URL",
-        "paste": "I-paste ang artikulo o teksto rito",
+        "load_url": "🌐 Kunin ang artikulo mula sa URL",
+        "paste": "Ilagay dito ang artikulo o teksto",
         "verdict": "Hatol",
         "summary": "Buod ng pagsusuri",
-        "tagline": "Ang iyong formula bilang kumpas, mas mahigpit na kontrol bilang bantay-dagat.",
+        "tagline": "Ang iyong pormula bilang kompas, mas mahigpit na kontrol bilang bantay-hangganan.",
         "settings": "Mga Setting",
         "load_example": "I-load ang halimbawa",
         "show_method": "Ipakita ang pamamaraan",
-        "hard_fact_score_scale": "Scale ng Hard Fact Score",
-        "scale_0_5": "0–5 : napakarupok",
-        "scale_6_9": "6–9 : kahina-hinala",
+        "hard_fact_score_scale": "Hard Fact Score Scale",
+        "scale_0_5": "0–5 : napakahina",
+        "scale_6_9": "6–9 : kaduda-duda",
         "scale_10_14": "10–14 : kapani-paniwala ngunit kailangan ng cross-referencing",
-        "scale_15_20": "15–20 : matibay ang istruktura",
+        "scale_15_20": "15–20 : matatag sa istruktura",
         "analyze_multiple_articles_by_topic": "Suriin ang maraming artikulo ayon sa paksa",
-        "searching_analyzing_articles": "Hinahanap at sinusuri ang mga artikulo...",
-        "articles_analyzed": "mga artikulong nasuri.",
+        "searching_analyzing_articles": "Naghahanap at nagsusuri ng mga artikulo...",
+        "articles_analyzed": "mga artikulo na nasuri.",
         "analyzed_articles": "Mga Nasuring Artikulo",
         "avg_hard_fact": "Avg Hard Fact",
         "avg_classic_score": "Avg Classic Score",
-        "topic_doxa_index": "Topic Doxa Index",
+        "topic_doxa_index": "Indeks ng Doxa ng Paksa",
         "high": "Mataas",
         "medium": "Katamtaman",
         "low": "Mababa",
-        "credibility_score_dispersion": "Dispersion ng Credibility Score",
+        "credibility_score_dispersion": "Pagkalat ng Puntos ng Kredibilidad",
         "article_label": "Artikulo",
-        "analyzed_articles_details": "Mga detalye ng nasuring artikulo",
-        "no_exploitable_articles_found": "Walang nahanap na magagamit na artikulo para sa paksang ito.",
+        "analyzed_articles_details": "Mga Detalye ng Nasuring Artikulo",
+        "no_exploitable_articles_found": "Walang nakitang magagamit na artikulo para sa paksang ito.",
         "enter_keyword_first": "Maglagay muna ng keyword o paksa.",
-        "article_loaded_from_url": "Na-load na ang artikulo mula sa URL.",
+        "article_loaded_from_url": "Na-load ang artikulo mula sa URL.",
         "unable_to_retrieve_text": "Hindi makuha ang teksto mula sa URL na ito.",
-        "paste_url_first": "I-paste muna ang URL.",
-        "classic_score": "Classic Score",
-        "improved_score": "Improved Score",
+        "paste_url_first": "Mag-paste muna ng URL.",
+        "classic_score": "Klasikong Puntos",
+        "improved_score": "Pinahusay na Puntos",
         "hard_fact_score": "Hard Fact Score",
         "help_classic_score": "M = (G + N) − D",
         "help_improved_score": "Pagdaragdag ng V at parusa sa R",
-        "help_hard_fact_score": "Mas mahigpit na kontrol sa mga claim at source",
-        "credibility_gauge": "Credibility Gauge",
-        "fragile": "Marupok",
-        "fragile_message": "Ang teksto ay nagpapakita ng malakas na kahinaan sa istruktura o katotohanan.",
-        "doubtful": "Kahina-hinala",
-        "doubtful_message": "Ang teksto ay naglalaman ng ilang kapani-paniwalang elemento, ngunit nananatiling napaka-hindi sigurado.",
+        "help_hard_fact_score": "Mas mahigpit na kontrol sa mga pahayag at pinagmulan",
+        "credibility_gauge": "Sukat ng Kredibilidad",
+        "fragile": "Mahina",
+        "fragile_message": "Ang teksto ay nagpapakita ng malakas na istruktural o paktwal na kahinaan.",
+        "doubtful": "Kaduda-duda",
+        "doubtful_message": "Ang teksto ay naglalaman ng ilang kapani-paniwalang elemento, ngunit nananatiling napaka-hindi tiyak.",
         "plausible": "Kapani-paniwala",
-        "plausible_message": "Ang teksto ay tila kapani-paniwala sa pangkalahatan, ngunit nangangailangan pa rin ng beripikasyon.",
-        "robust": "Matibay",
-        "robust_message": "Ang teksto ay nagpapakita ng medyo matibay na istruktura at batayan sa katotohanan.",
-        "score": "Iskor",
-        "strengths_detected": "Mga nakitang kalakasan",
-        "few_strong_signals": "Kakaunting malakas na signal ang natukoy.",
-        "weaknesses_detected": "Mga nakitang kahinaan",
-        "no_major_weakness": "Walang natukoy na malaking kahinaan sa pamamagitan ng heuristics.",
-        "hard_fact_checking_by_claim": "Hard fact-checking ayon sa claim",
-        "claim": "Claim",
+        "plausible_message": "Ang teksto ay lumilitaw na pangkalahatang kapani-paniwala, ngunit nangangailangan pa rin ng pagpapatunay.",
+        "robust": "Matatag",
+        "robust_message": "Ang teksto ay nagtatanghal ng isang medyo solidong istruktural at paktwal na batayan.",
+        "score": "Puntos",
+        "strengths_detected": "Mga lakas na natukoy",
+        "few_strong_signals": "Ilang malakas na signal ang natukoy.",
+        "weaknesses_detected": "Mga kahinaan na natukoy",
+        "no_major_weakness": "Walang pangunahing kahinaan na natukoy ng heuristika.",
+        "hard_fact_checking_by_claim": "Hard fact-checking sa bawat pahayag",
+        "claim": "Pahayag",
         "status": "Katayuan",
-        "verifiability": "Verifiability",
+        "verifiability": "Pagpapatunay",
         "risk": "Panganib",
         "number": "Numero",
         "date": "Petsa",
-        "named_entity": "Named Entity",
-        "attributed_source": "Attributed Source",
-        "paste_longer_text": "I-paste ang mas mahabang teksto upang makakuha ng masusing mapping ng mga claim.",
-        "paste_text_or_load_url": "I-paste ang teksto o i-load ang URL, pagkatapos ay i-click ang « 🔍 Suriin ang artikulo ».",
-        "method": "Pamamaraan",
-        "original_formula": "Orihinal na Formula",
-        "articulated_knowledge_density": "G : articulated knowledge density — mga source, pigura, pangalan, sanggunian, mga bakas na maaaring ma-verify.",
-        "integration": "N : integration — konteksto, mga nuance, reserbasyon, argumentative coherence.",
-        "assertive_rigidity": "D : assertive rigidity — mga katiyakang walang basehan, emosyonal na karga.",
-        "improved_variant": "Improved Variant",
-        "addition_of_v_and_r": "Pagdaragdag ng V para sa verifiability at R bilang parusang retorika.",
+        "named_entity": "Pinangalanang Entidad",
+        "attributed_source": "Iniugnay na Pinagmulan",
+        "paste_longer_text": "Mag-paste ng bahagyang mas mahabang teksto upang makakuha ng detalyadong pagmamapa ng mga pahayag.",
+        "paste_text_or_load_url": "Mag-paste ng teksto o mag-load ng URL, pagkatapos ay i-click ang « 🔍 Suriin ang artikulo ».",
+        "method": "Paraan",
+        "original_formula": "Orihinal na Pormula",
+        "articulated_knowledge_density": "G : density ng articulated knowledge — mga pinagmulan, numero, pangalan, sanggunian, nabe-verify na bakas.",
+        "integration": "N : integrasyon — konteksto, nuances, reserbasyon, lohikal na pagkakaugnay.",
+        "assertive_rigidity": "D : assertive rigidity — hindi suportadong katiyakan, retorikal na pagmamalabis, doxic inflation.",
+        "improved_variant": "Pinahusay na Variant",
+        "addition_of_v_and_r": "Pagdaragdag ng V para sa pagpapatunay at R bilang retorikal na parusa.",
         "hard_fact_checking_module": "Hard Fact-Checking Module",
-        "claim_evaluation_criteria": "Ang bawat pangungusap ay itinuturing na potensyal na claim, pagkatapos ay sinusuri ayon sa:",
-        "criteria_list": "- pagkakaroon ng mga petsa, numero, tamang pangalan,\n- pagkakaroon ng malinaw na attribution,\n- antas ng absolutismo,\n- sensationalist na karga,\n- malamang na kalidad ng mga nabanggit na source,\n- mga narrative red flag.",
-        "practical_hard_fact_formula": "Praktikal na Formula ng Hard Fact Score",
-        "qs": "QS: kalidad ng mga source",
-        "vc": "VC: average verifiability ng mga claim",
-        "rc": "RC: average na panganib ng mga claim",
-        "f": "F: bilang ng mga red flag",
-        "disclaimer": "Ang app na ito ay hindi pumapalit sa isang tunay na mamamahayag, isang tunay na mananaliksik, o isang klerk ng katotohanan. Ngunit tinatanggal na nito ang ilang maskara sa tekstong nagpaparada.",
-        "presence_of_source_markers": "Pagkakaroon ng mga source o data marker",
-        "verifiability_clues": "Nahanap na mga pahiwatig ng verifiability: mga link, pigura, petsa o porsyento",
-        "text_contains_nuances": "Ang teksto ay naglalaman ng mga nuance, limitasyon o counterpoint",
-        "text_evokes_robust_sources": "Ang teksto ay tumutukoy sa mga potensyal na matibay o institusyonal na source",
-        "some_claims_verifiable": "Ang ilang mga claim ay sapat na naka-angkla upang ma-verify nang maayos",
-        "overly_assertive_language": "Masyadong mapilit o absolutistang pananalita",
-        "notable_emotional_sensational_charge": "Kapansin-pansing emosyonal o sensationalist na karga",
-        "almost_total_absence_of_verifiable_elements": "Halos kabuuang kawalan ng mga elementong maaaring ma-verify",
-        "text_too_short": "Masyadong maikli ang teksto upang seryosong suportahan ang isang malakas na claim",
-        "multiple_claims_very_fragile": "Maraming sentral na claim ang napakarupok base sa mga kasalukuyang pahiwatig",
-        "to_verify": "Susuriin",
-        "rather_verifiable": "Medyo mabe-verify",
-        "very_fragile": "Napakarupok",
-        "low_credibility": "Mababang kredibilidad",
-        "prudent_credibility": "Maingat na kredibilidad",
-        "rather_credible": "Medyo kapani-paniwala",
-        "strong_credibility": "Malakas na kredibilidad",
-        "yes": "Oo",
-        "no": "Hindi",
-        "llm_analysis": "Mecroyance Analysis para sa LLM",
-        "llm_intro": "Inilalapat ng seksyong ito ang mga modelong hango sa treatise upang suriin ang cognitive posture ng isang sistema (AI o tao).",
-        "overconfidence": "Overconfidence (Asymmetry)",
-        "calibration": "Relative Calibration (Ratio)",
-        "revisability": "Revisability (R)",
-        "cognitive_closure": "Cognitive Closure",
-        "cognitive_potential": "Cognitive Potential",
-        "cognitive_field": "Cognitive Field (Attractor)",
-        "cognitive_curvature": "Cognitive Curvature (κ)",
-        "interpretation": "Interpretasyon",
-        "llm_metrics": "Mga Metriko ng LLM",
-        "zone_closure": "Zone ng cognitive closure: ang katiyakan ay lumalampas sa cognitive anchoring.",
-        "zone_stability": "Zone ng revisable stability: ang mecroyance ay sumasama nang hindi nangingibabaw.",
-        "zone_lucidity": "Zone ng tumataas na lucidity: ang duda ang nagpapatakbo sa cognition.",
-        "zone_rare": "Rare zone: mataas na integrated at reflexive na cognition.",
-        "zone_pansapience": "Hypothetical pan-sapience: limitadong horizon ng isang halos ganap na revisable na cognition.",
-        "zone_asymptote": "Ideal asymptote: kabuuan ng kaalaman at integrasyon, nang walang rigidification.",
-        "out_of_spectrum": "Halaga sa labas ng theoretical spectrum.",
+        "claim_evaluation_criteria": "Ang bawat pangungusap ay itinuturing na isang potensyal na pahayag, pagkatapos ay sinusuri ayon sa:",
+        "criteria_list": "- pagkakaroon ng mga petsa, numero, wastong pangalan,\n- pagkakaroon ng malinaw na atribusyon,\n- antas ng absolutismo,\n- sensational na singil,\n- posibleng kalidad ng mga nabanggit na pinagmulan,\n- narrative red flags.",
+        "practical_hard_fact_formula": "Praktikal na Pormula ng Hard Fact Score",
+        "qs": "QS : kalidad ng mga pinagmulan",
+        "vc": "VC : average na pagpapatunay ng mga pahayag",
+        "rc": "RC : average na panganib ng mga pahayag",
+        "f": "F : bilang ng mga red flag",
+        "disclaimer": "Ang app na ito ay hindi pumapalit sa isang tunay na mamamahayag, isang tunay na mananaliksik, o isang klerk ng katotohanan. Ngunit tinatanggal na nito ang ilang maskara mula sa nagpaparadang teksto.",
+        "presence_of_source_markers": "Pagkakaroon ng mga marker ng pinagmulan o data",
+        "verifiability_clues": "Mga pahiwatig ng pagpapatunay na natukoy: mga link, numero, petsa o porsyento",
+        "text_contains_nuances": "Ang teksto ay naglalaman ng mga nuances, limitasyon o kontrapunto",
+        "text_evokes_robust_sources": "Ang teksto ay nagpapahiwatig ng posibleng matatag o institusyonal na pinagmulan",
+        "some_claims_verifiable": "Ang ilang mga pahayag ay sapat na nakabaon upang maayos na mapatunayan",
+        "overly_assertive_language": "Labis na mapilit o absolutistang wika",
+        "notable_emotional_sensational_charge": "Kapansin-pansing emosyonal o sensational na singil",
+        "almost_total_absence_of_verifiable_elements": "Halos kumpletong kawalan ng nabe-verify na elemento",
+        "text_too_short": "Masyadong maikli ang teksto upang seryosong suportahan ang isang malakas na pahayag",
+        "multiple_claims_very_fragile": "Maraming sentral na pahayag ang napakahina dahil sa kasalukuyang mga pahiwatig",
+        "to_verify": "Upang i-verify",
+        "rather_verifiable": "Sa halip nabe-verify",
+        "very_fragile": "Napakabihira",
     },
 }
 
-# -----------------------------
-# Langue par défaut
-# -----------------------------
-lang = st.sidebar.selectbox("Langue / Language", list(translations.keys()))
+lang = st.sidebar.selectbox(
+    "Language / Langue / Idioma",
+    ["Français", "English", "Español", "Filipino"]
+)
+
+# bannière de l'application
+st.image("banner.png", use_container_width=True)
+
+SAMPLE_ARTICLE = """Titre : Une découverte historique va bouleverser la science pour toujours
+
+Des chercheurs affirment avoir trouvé une substance naturelle capable de guérir presque toutes les maladies. Selon plusieurs experts, cette avancée serait cachée depuis des années par certaines industries. Tout le monde devrait s'inquiéter. Aucune source officielle n'a encore publié de données complètes, mais les témoignages sont troublants et les résultats sembleraient indiscutables.
+"""
 
 # -----------------------------
-# Classes de Cognition (Nouveau)
+# Utilitaires
 # -----------------------------
-class Cognition:
-    def __init__(self, gnosis: float, nous: float, doxa: float):
-        self.G = self.clamp(gnosis)
-        self.N = self.clamp(nous)
-        self.D = self.clamp(doxa)
-        self.M = self.compute_mecroyance()
+def clamp(value: float, min_value: float = 0.0, max_value: float = 20.0) -> float:
+    return max(min_value, min(max_value, value))
 
-    @staticmethod
-    def clamp(value: float, min_val: float = 0.0, max_val: float = 10.0) -> float:
-        return max(min_val, min(max_val, value))
 
-    def compute_mecroyance(self) -> float:
-        return (self.G + self.N) - self.D
+def normalize(
+    value: float,
+    in_min: float,
+    in_max: float,
+    out_min: float = 0.0,
+    out_max: float = 20.0,
+) -> float:
+    if in_max == in_min:
+        return out_min
+    ratio = (value - in_min) / (in_max - in_min)
+    return out_min + ratio * (out_max - out_min)
 
-    def interpret(self) -> str:
-        m = self.M
-        if m < 0:
-            return translations[lang]["zone_closure"]
-        elif 0 <= m <= 10:
-            return translations[lang]["zone_stability"]
-        elif 10 < m <= 17:
-            return translations[lang]["zone_lucidity"]
-        elif 17 < m < 19:
-            return translations[lang]["zone_rare"]
-        elif 19 <= m < 20:
-            return translations[lang]["zone_pansapience"]
-        elif m == 20:
-            return translations[lang]["zone_asymptote"]
-        else:
-            return translations[lang]["out_of_spectrum"]
 
-# -----------------------------
-# Données d'exemple
-# -----------------------------
-SAMPLE_ARTICLE = """L'intelligence artificielle va remplacer 80% des emplois d'ici 2030, selon une étude choc publiée hier par le cabinet GlobalTech. Le rapport de 45 pages affirme que les secteurs de la finance et de la santé seront les plus touchés. "C'est une révolution sans précédent", déclare Jean Dupont, expert en robotique. Cependant, certains économistes comme Marie Curie restent prudents : "Il faut nuancer ces chiffres, car de nouveaux métiers vont apparaître." L'étude précise que 12 millions de postes pourraient être créés en Europe. Malgré cela, l'inquiétude grandit chez les salariés qui craignent pour leur avenir. Il est absolument certain que nous allons vers une crise sociale majeure si rien n'est fait immédiatement."""
+def count_matches(text: str, pattern: str, flags: int = 0) -> int:
+    return len(re.findall(pattern, text, flags))
 
-# -----------------------------
-# Fonctions utilitaires
-# -----------------------------
-def clamp(n, minn, maxn):
-    return max(min(maxn, n), minn)
+
+def split_into_claims(text: str) -> List[str]:
+    if not text.strip():
+        return []
+    rough = re.split(r"(?<=[.!?])\s+", text.strip())
+    claims = []
+    for sentence in rough:
+        sentence = sentence.strip()
+        if len(sentence.split()) >= 8:
+            claims.append(sentence)
+    return claims[:20]
+
 
 def extract_article_from_url(url: str) -> str:
     try:
         article = Article(url)
         article.download()
         article.parse()
-        return article.text
-    except:
+
+        text = article.text.strip()
+
+        if article.title:
+            return "Titre : " + article.title + "\n\n" + text
+        return text
+
+    except Exception:
         return ""
 
-def search_articles_by_keyword(keyword: str, max_results: int = 10) -> List[Dict]:
-    """Recherche des articles sur DuckDuckGo filtrés par domaines de confiance."""
-    trusted_domains = [
-        "lemonde.fr", "lefigaro.fr", "liberation.fr", "francetvinfo.fr", 
-        "lexpress.fr", "lepoint.fr", "nouvelobs.com", "la-croix.com",
-        "lesechos.fr", "latribune.fr", "mediapart.fr", "arte.tv",
-        "bbc.com", "reuters.com", "apnews.com", "nytimes.com", 
-        "theguardian.com", "bloomberg.com", "dw.com", "aljazeera.com",
-        "nature.com", "science.org", "who.int", "un.org", "worldbank.org",
-        "elpais.com", "elmundo.es", "corriere.it", "spiegel.de", "zeit.de"
-    ]
-    
+
+def search_articles_by_keyword(keyword: str, max_results: int = 10):
+    """
+    Moteur de recherche amélioré :
+    - Liste de domaines de confiance élargie (25+ sources)
+    - Requête plus flexible sans guillemets stricts autour du mot-clé
+    - Volume de résultats bruts multiplié par 5 pour augmenter les chances de trouver des domaines de confiance
+    - Utilise le nouveau package ddgs (anciennement duckduckgo_search)
+    """
     results = []
+
+    # Liste élargie de domaines de confiance (médias, institutions, presse internationale)
+    trusted_domains = [
+        # Agences de presse internationales
+        "reuters.com",
+        "apnews.com",
+        "afp.com",
+        # Médias anglophones
+        "bbc.com",
+        "theguardian.com",
+        "nytimes.com",
+        "washingtonpost.com",
+        "wsj.com",
+        "bloomberg.com",
+        "ft.com",
+        "cnn.com",
+        "npr.org",
+        "politico.com",
+        "politico.eu",
+        # Médias francophones
+        "lemonde.fr",
+        "france24.com",
+        "francetvinfo.fr",
+        "liberation.fr",
+        "lefigaro.fr",
+        "lesechos.fr",
+        "mediapart.fr",
+        "lepoint.fr",
+        "lexpress.fr",
+        "rfi.fr",
+        # Médias hispanophones
+        "elpais.com",
+        # Médias germanophones et internationaux
+        "spiegel.de",
+        "dw.com",
+        "aljazeera.com",
+        # Sources scientifiques et institutionnelles
+        "nature.com",
+        "science.org",
+        "thelancet.com",
+        "nejm.org",
+        "who.int",
+        "un.org",
+        "europa.eu",
+    ]
+
     try:
+        # Requête plus flexible : sans guillemets stricts, avec des termes booléens
+        # pour cibler des publications journalistiques ou scientifiques
+        query = f"{keyword} (actualités OR news OR article OR analyse OR reportage OR étude)"
+
         with DDGS() as ddgs:
-            # Requête assouplie pour plus de résultats
-            query = f"{keyword} (actualités OR news OR article OR analyse OR reportage OR étude)"
-            ddg_results = list(ddgs.text(query, max_results=max_results * 5))
-            
-            for r in ddg_results:
-                url = r.get('href', '')
-                if any(domain in url for domain in trusted_domains):
-                    results.append({
-                        "title": r.get('title', 'Sans titre'),
+            # On demande 5x plus de résultats bruts pour maximiser les chances
+            # de trouver des articles provenant des domaines de confiance
+            search_results = ddgs.text(query, max_results=max_results * 5)
+
+            for r in search_results:
+                url = r.get("href", "")
+                if not url:
+                    continue
+
+                # Vérification souple : le domaine est-il dans notre liste ?
+                if not any(domain in url.lower() for domain in trusted_domains):
+                    continue
+
+                results.append(
+                    {
+                        "title": r.get("title", ""),
                         "url": url,
-                        "source": url.split('/')[2]
-                    })
-                    if len(results) >= max_results:
-                        break
+                        "source": r.get("body", ""),
+                    }
+                )
+
+                if len(results) >= max_results:
+                    break
+
     except Exception as e:
         st.warning(f"Erreur lors de la recherche : {e}")
+        return []
+
     return results
 
+
+def analyze_multiple_articles(keyword: str, max_results: int = 10):
+    found_articles = search_articles_by_keyword(keyword, max_results=max_results)
+    analyzed = []
+
+    for item in found_articles:
+        url = item.get("url", "").strip()
+        if not url:
+            continue
+
+        text = extract_article_from_url(url)
+        if not text:
+            continue
+
+        result = analyze_article(text)
+
+        analyzed.append(
+            {
+                "Titre": item.get("title", "Sans titre"),
+                "URL": url,
+                "Score classique": result["M"],
+                "Score amélioré": result["improved"],
+                "Hard Fact Score": result["hard_fact_score"],
+                "Verdict": result["verdict"],
+            }
+        )
+
+    return analyzed
+
+
+# -----------------------------
+# Moteur d'analyse
+# -----------------------------
+def score_source_quality(lower: str) -> float:
+    score = 10.0
+
+    strong_sources = [
+        r"reuters", r"associated press", r"ap news", r"afp", r"bbc", r"le monde",
+        r"nature", r"science", r"the lancet", r"nejm", r"who", r"oms", r"unicef",
+        r"eurostat", r"insee", r"onu", r"united nations", r"gouvernement", r"minist[eè]re",
+        r"universit[eé]", r"institut", r"cour des comptes", r"european commission",
+    ]
+    weak_sources = [
+        r"blog", r"rumeur", r"anonyme", r"telegram", r"whatsapp", r"forum",
+        r"tiktok", r"youtube", r"influenceur", r"source inconnue",
+    ]
+    vague_authority = [
+        r"selon des experts", r"plusieurs experts", r"des experts affirment",
+        r"certains disent", r"on raconte", r"beaucoup pensent",
+    ]
+
+    if any(re.search(p, lower) for p in strong_sources):
+        score += 6
+    if any(re.search(p, lower) for p in weak_sources):
+        score -= 6
+    if any(re.search(p, lower) for p in vague_authority):
+        score -= 4
+
+    return round(clamp(score), 1)
+
+
+def extract_red_flags(lower: str) -> List[str]:
+    flags = []
+    patterns = {
+        "Narration de dissimulation ou de complot": r"secret|cach[ée] depuis des ann[ée]es|on vous ment|v[ée]rit[ée] cach[ée]e|complot",
+        "Promesse extraordinaire ou disproportionnée": r"gu[ée]rir presque toutes les maladies|miracle|r[ée]volutionnaire|d[ée]finitif",
+        "Pression injonctive ou émotionnelle": r"tout le monde devrait|personne ne vous dit|il faut absolument",
+        "Affirmation forte sans base documentaire robuste": r"aucune source officielle|sans preuve|sans donn[ée]es compl[èe]tes",
+        "Attribution floue des autorités citées": r"selon plusieurs experts|des chercheurs affirment",
+    }
+    for label, pattern in patterns.items():
+        if re.search(pattern, lower):
+            flags.append(label)
+    return flags
+
+
 @dataclass
-class Claim:
+class ClaimAssessment:
     text: str
+    verifiability: float
+    risk: float
+    status: str
     has_number: bool
     has_date: bool
     has_named_entity: bool
     has_source_cue: bool
-    absolutism: int
-    emotional_charge: int
-    verifiability: float
-    risk: float
-    status: str
 
-def analyze_claim(sentence: str) -> Claim:
-    has_number = bool(re.search(r'\d+', sentence))
-    has_date = bool(re.search(r'\d{4}|janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche', sentence, re.I))
-    has_named_entity = bool(re.search(r'[A-Z][a-z]+ [A-Z][a-z]+|[A-Z]{2,}', sentence))
-    
-    source_cues = ['selon', 'affirme', 'déclare', 'rapport', 'étude', 'expert', 'source', 'dit', 'écrit', 'publié', 'according to', 'claims', 'states', 'report', 'study', 'expert', 'source', 'says', 'writes', 'published']
-    has_source_cue = any(cue in sentence.lower() for cue in source_cues)
-    
-    absolutist_words = ['toujours', 'jamais', 'absolument', 'certain', 'prouvé', 'incontestable', 'tous', 'aucun', 'always', 'never', 'absolutely', 'certain', 'proven', 'unquestionable', 'all', 'none']
-    absolutism = sum(1 for word in absolutist_words if word in sentence.lower())
-    
-    emotional_words = ['choc', 'incroyable', 'terrible', 'peur', 'menace', 'scandale', 'révolution', 'urgent', 'shock', 'incredible', 'terrible', 'fear', 'threat', 'scandal', 'revolution', 'urgent']
-    emotional_charge = sum(1 for word in emotional_words if word in sentence.lower())
-    
-    v_score = (has_number * 5) + (has_date * 5) + (has_named_entity * 5) + (has_source_cue * 5)
-    r_score = (absolutism * 7) + (emotional_charge * 7)
-    
-    v_score = clamp(v_score, 0, 20)
-    r_score = clamp(r_score, 0, 20)
-    
-    if v_score < 5:
-        status = translations[lang]["very_fragile"]
-    elif v_score < 12:
-        status = translations[lang]["to_verify"]
-    else:
+
+def assess_claim(sentence: str) -> ClaimAssessment:
+    has_number = bool(re.search(r"\b\d+(?:[.,]\d+)?\b", sentence))
+    has_date = bool(re.search(r"\b(?:19|20)\d{2}\b", sentence))
+    has_named_entity = bool(
+        re.search(r"\b[A-ZÉÈÀÂÊÎÔÛÄËÏÖÜ][a-zàâçéèêëîïôûùüÿñæœ'\-]{2,}\b", sentence)
+    )
+    has_source_cue = bool(
+        re.search(r"selon|d'après|rapport|étude|données|publication|université|institut|journal|revue", sentence, re.I)
+    )
+    hedged = bool(re.search(r"semble|pourrait|suggère|à confirmer|probable", sentence, re.I))
+    absolute = bool(re.search(r"toujours|jamais|indiscutable|certain|absolument|sans aucun doute|prouve", sentence, re.I))
+    sensational = bool(re.search(r"choc|explosif|scandale|révélations|bouleverser", sentence, re.I))
+
+    verifiability = 4.0
+    if has_number:
+        verifiability += 4
+    if has_date:
+        verifiability += 3
+    if has_named_entity:
+        verifiability += 3
+    if has_source_cue:
+        verifiability += 4
+    verifiability = round(clamp(verifiability), 1)
+
+    risk = 3.0
+    if absolute:
+        risk += 6
+    if sensational:
+        risk += 4
+    if not has_source_cue:
+        risk += 3
+    if not has_named_entity and not has_number:
+        risk += 2
+    if hedged:
+        risk -= 1.5
+    risk = round(clamp(risk), 1)
+
+    status = translations[lang]["to_verify"]
+    if verifiability >= 12 and risk <= 7:
         status = translations[lang]["rather_verifiable"]
-        
-    return Claim(sentence, has_number, has_date, has_named_entity, has_source_cue, absolutism, emotional_charge, v_score, r_score, status)
+    elif risk >= 12:
+        status = translations[lang]["very_fragile"]
 
-def analyze_article(text: str):
-    words = text.split()
-    sentences = re.split(r'[.!?]+', text)
-    sentences = [s.strip() for s in sentences if len(s.strip()) > 10]
-    
+    return ClaimAssessment(
+        text=sentence,
+        verifiability=verifiability,
+        risk=risk,
+        status=status,
+        has_number=has_number,
+        has_date=has_date,
+        has_named_entity=has_named_entity,
+        has_source_cue=has_source_cue,
+    )
+
+
+def analyze_article(text: str) -> Dict:
+    clean = text.strip()
+    words = re.findall(r"\S+", clean)
+    sentences = [s.strip() for s in re.split(r"[.!?]+", clean) if s.strip()]
+    lower = clean.lower()
+
+    source_markers = count_matches(
+        lower,
+        r"selon|d'après|source|sources|étude|rapport|données|statistiques|recherche|journal|revue|université|institut|publication|enquête|archive|preuve|preuves",
+    )
+    citation_like = count_matches(
+        clean,
+        r"https?://|www\.|\[[0-9]+\]|\([0-9]{4}\)|%|\d+\s?(millions|milliards|%|ans|jours|mois)",
+        re.I,
+    )
+    named_entities = count_matches(
+        clean,
+        r"\b[A-ZÉÈÀÂÊÎÔÛÄËÏÖÜ][a-zàâçéèêëîïôûùüÿñæœ'\-]{2,}\b",
+    )
+    hedges = count_matches(
+        lower,
+        r"semble|semblerait|probable|probablement|possible|possiblement|suggère|suggèrent|pourrait|pourraient|hypothèse|incertain|selon les premiers éléments|à confirmer",
+    )
+    certainty = count_matches(
+        lower,
+        r"toujours|jamais|indiscutable|indiscutables|prouve|preuve définitive|certain|certainement|absolument|sans aucun doute|tout le monde|personne ne|forcément|à coup sûr|vérité cachée|on vous ment|bouleverser|explosif|choc|scandale|incroyable",
+    )
+    emotional = count_matches(
+        lower,
+        r"scandale|honte|peur|catastrophe|mensonge|censure|complot|terrifiant|choquant|alarmant|panique|bouleverser|explosif|révélations",
+    )
+    nuance_markers = count_matches(
+        lower,
+        r"cependant|toutefois|néanmoins|en revanche|mais|d'un côté|de l'autre|limite|limites|réserve|réserves|biais|méthodologie|contexte|contre-argument|incertitude",
+    )
     article_length = len(words)
-    
-    source_markers = len(re.findall(r'selon|affirme|déclare|rapport|étude|expert|source|according to|claims|states|report|study|expert|source', text.lower()))
-    citation_like = len(re.findall(r'"|\'|«|»', text))
-    nuance_markers = len(re.findall(r'cependant|pourtant|néanmoins|toutefois|mais|nuancer|prudence|possible|peut-être|however|yet|nevertheless|nonetheless|but|nuance|caution|possible|maybe', text.lower()))
-    
-    G = clamp(source_markers * 1.5 + citation_like * 0.5, 0, 10)
-    N = clamp(nuance_markers * 2 + (article_length / 100), 0, 10)
-    
-    certainty = len(re.findall(r'certain|absolument|prouvé|évident|incontestable|certainly|absolutely|proven|obvious|unquestionable', text.lower()))
-    emotional = len(re.findall(r'choc|incroyable|terrible|peur|menace|scandale|révolution|urgent|shock|incredible|terrible|fear|threat|scandal|revolution|urgent', text.lower()))
-    D = clamp(certainty * 2 + emotional * 1.5, 0, 10)
-    
+    avg_sentence_length = (len(words) / len(sentences)) if sentences else 0
+
+    G = 3.0
+    G += normalize(source_markers, 0, 12, 0, 7)
+    G += normalize(citation_like, 0, 10, 0, 5)
+    G += normalize(named_entities, 0, 18, 0, 3)
+    G += 1.5 if article_length > 180 else 0.75 if article_length > 90 else 0
+    G = round(clamp(G), 1)
+
+    N = 4.0
+    N += normalize(nuance_markers, 0, 10, 0, 7)
+    N += min(3, hedges * 0.5) if hedges > 0 else 0
+    N += 1.5 if 10 <= avg_sentence_length <= 28 else 0.5
+    N += 1 if len(sentences) >= 3 else 0
+    N = round(clamp(N), 1)
+
+    D = 2.0
+    D += normalize(certainty, 0, 10, 0, 9)
+    D += normalize(emotional, 0, 8, 0, 5)
+    D += 2 if article_length < 80 else 0
+    if source_markers == 0 and citation_like == 0:
+        D += 2.5
+    D = round(clamp(D), 1)
+
     M = round((G + N) - D, 1)
-    
-    V = clamp(G * 0.8 + N * 0.2, 0, 10)
-    R = clamp(D * 0.7 + (emotional * 1.2), 0, 10)
-    improved = round((G + N + V) - (D + R), 1)
-    
-    claims = [analyze_claim(s) for s in sentences[:15]]
-    
-    avg_claim_verifiability = sum(c.verifiability for c in claims) / len(claims) if claims else 0
-    avg_claim_risk = sum(c.risk for c in claims) / len(claims) if claims else 0
-    
-    source_quality = clamp(source_markers * 3 - (emotional * 2), 0, 20)
-    
-    red_flags = []
-    if D > 8: red_flags.append("Doxa saturée")
-    if emotional > 5: red_flags.append("Pathos excessif")
-    if G < 2: red_flags.append("Désert documentaire")
-    if article_length < 50: red_flags.append("Format indigent")
-    
-    hard_fact_score_raw = (0.18 * G + 0.12 * N + 0.20 * V + 0.22 * source_quality + 0.18 * avg_claim_verifiability) - (0.16 * D + 0.12 * R + 0.18 * avg_claim_risk + 0.9 * len(red_flags))
+
+    V = round(clamp(normalize(source_markers + citation_like, 0, 18, 0, 20)), 1)
+    R = round(clamp(normalize(certainty + emotional, 0, 16, 0, 20)), 1)
+    improved_raw = ((G + N + V) / 3) - (D * 0.55) - (R * 0.25)
+    improved = round(clamp(improved_raw, -10, 20), 1)
+
+    claims = [assess_claim(c) for c in split_into_claims(clean)]
+    source_quality = score_source_quality(lower)
+    red_flags = extract_red_flags(lower)
+
+    avg_claim_risk = round(sum(c.risk for c in claims) / len(claims), 1) if claims else 0.0
+    avg_claim_verifiability = round(sum(c.verifiability for c in claims) / len(claims), 1) if claims else 0.0
+
+    hard_fact_score_raw = (
+        (G * 0.18)
+        + (N * 0.12)
+        + (V * 0.20)
+        + (source_quality * 0.22)
+        + (avg_claim_verifiability * 0.18)
+        - (D * 0.16)
+        - (R * 0.12)
+        - (avg_claim_risk * 0.18)
+        - (len(red_flags) * 0.9)
+    )
     hard_fact_score = round(clamp(hard_fact_score_raw + 8, 0, 20), 1)
 
     if hard_fact_score < 6:
@@ -737,25 +856,6 @@ def analyze_article(text: str):
         "red_flags": red_flags,
     }
 
-def analyze_multiple_articles(keyword: str, max_results: int = 10):
-    articles = search_articles_by_keyword(keyword, max_results)
-    results = []
-    for art in articles:
-        try:
-            full_text = extract_article_from_url(art['url'])
-            if len(full_text) > 200:
-                analysis = analyze_article(full_text)
-                results.append({
-                    "Source": art['source'],
-                    "Titre": art['title'],
-                    "Score classique": analysis['M'],
-                    "Hard Fact Score": analysis['hard_fact_score'],
-                    "Verdict": analysis['verdict'],
-                    "URL": art['url']
-                })
-        except:
-            continue
-    return results
 
 # -----------------------------
 # Interface
@@ -795,21 +895,37 @@ if st.button(translations[lang]["analyze_topic"], key="analyze_topic"):
 
         if multiple_results:
             df_multi = pd.DataFrame(multiple_results)
+
+            # tri du plus crédible au moins crédible
             df_multi = df_multi.sort_values("Hard Fact Score", ascending=False)
+
             st.success(f"{len(df_multi)} {translations[lang]['articles_analyzed']}")
+
             moyenne_hf = round(df_multi["Hard Fact Score"].mean(), 1)
             moyenne_classique = round(df_multi["Score classique"].mean(), 1)
+
             c1, c2, c3 = st.columns(3)
             c1.metric(translations[lang]["analyzed_articles"], len(df_multi))
             c2.metric(translations[lang]["avg_hard_fact"], moyenne_hf)
             c3.metric(translations[lang]["avg_classic_score"], moyenne_classique)
+
             ecart_type_hf = round(df_multi["Hard Fact Score"].std(), 2)
-            indice_doxa = "Élevé" if ecart_type_hf < 1.5 else ("Moyen" if ecart_type_hf < 3 else "Faible")
-            st.metric(translations[lang]["topic_doxa_index"], translations[lang][indice_doxa.lower()])
+
+            if ecart_type_hf < 1.5:
+                indice_doxa = "Élevé"
+            elif ecart_type_hf < 3:
+                indice_doxa = "Moyen"
+            else:
+                indice_doxa = "Faible"
+
+            st.metric(translations[lang]["topic_doxa_index"], indice_doxa)
+
             st.subheader(translations[lang]["credibility_score_dispersion"])
+
             df_plot = df_multi.copy()
             df_plot["Article"] = [f"{translations[lang]['article_label']} {i+1}" for i in range(len(df_plot))]
             st.bar_chart(df_plot.set_index("Article")["Hard Fact Score"])
+
             st.subheader(translations[lang]["analyzed_articles_details"])
             st.dataframe(df_multi, use_container_width=True, hide_index=True)
         else:
@@ -847,20 +963,34 @@ analyser = st.button(
 
 if analyser:
     result = analyze_article(article)
+
     col1, col2, col3 = st.columns(3)
     col1.metric(translations[lang]["classic_score"], result["M"], help=translations[lang]["help_classic_score"])
     col2.metric(translations[lang]["improved_score"], result["improved"], help=translations[lang]["help_improved_score"])
-    col3.metric(translations[lang]["hard_fact_score"], result["hard_fact_score"], help=translations[lang]["help_hard_fact_score"])
+    col3.metric(
+        translations[lang]["hard_fact_score"],
+        result["hard_fact_score"],
+        help=translations[lang]["help_hard_fact_score"],
+    )
 
     score = result["hard_fact_score"]
+
     if score <= 6:
-        couleur, etiquette, message = "🔴", translations[lang]["fragile"], translations[lang]["fragile_message"]
+        couleur = "🔴"
+        etiquette = translations[lang]["fragile"]
+        message = translations[lang]["fragile_message"]
     elif score <= 11:
-        couleur, etiquette, message = "🟠", translations[lang]["doubtful"], translations[lang]["doubtful_message"]
+        couleur = "🟠"
+        etiquette = translations[lang]["doubtful"]
+        message = translations[lang]["doubtful_message"]
     elif score <= 15:
-        couleur, etiquette, message = "🟡", translations[lang]["plausible"], translations[lang]["plausible_message"]
+        couleur = "🟡"
+        etiquette = translations[lang]["plausible"]
+        message = translations[lang]["plausible_message"]
     else:
-        couleur, etiquette, message = "🟢", translations[lang]["robust"], translations[lang]["robust_message"]
+        couleur = "🟢"
+        etiquette = translations[lang]["robust"]
+        message = translations[lang]["robust_message"]
 
     st.subheader(f"{couleur} {translations[lang]['credibility_gauge']} : {etiquette}")
     st.progress(score / 20)
@@ -883,75 +1013,68 @@ if analyser:
 
     with st.expander(translations[lang]["strengths_detected"], expanded=True):
         if result["strengths"]:
-            for item in result["strengths"]: st.success(item)
-        else: st.info(translations[lang]["few_strong_signals"])
+            for item in result["strengths"]:
+                st.success(item)
+        else:
+            st.info(translations[lang]["few_strong_signals"])
 
     with st.expander(translations[lang]["weaknesses_detected"], expanded=True):
         if result["weaknesses"]:
-            for item in result["weaknesses"]: st.error(item)
-        else: st.success(translations[lang]["no_major_weakness"])
-
-    # --- Section Analyse LLM (Nouveau) ---
-    st.divider()
-    st.subheader(translations[lang]["llm_analysis"])
-    st.info(translations[lang]["llm_intro"])
-    
-    cog = Cognition(result["G"], result["N"], result["D"])
-    
-    # Modèles dérivés
-    overconfidence = result["D"] - (result["G"] + result["N"])
-    calibration = result["D"] / (result["G"] + result["N"]) if (result["G"] + result["N"]) > 0 else 10
-    revisability = (result["G"] + result["N"] + result["V"]) - result["D"]
-    closure = (result["D"] * (1 + len(result["red_flags"])/5)) / (result["G"] + result["N"]) if (result["G"] + result["N"]) > 0 else 10
-    potential = result["D"] - (result["G"] + result["N"])
-    field = result["D"] / (result["G"] + result["N"]) if (result["G"] + result["N"]) > 0 else 10
-    curvature = result["D"] / (result["G"] + result["N"]) if (result["G"] + result["N"]) > 0 else 10
-
-    c1, c2, c3, c4 = st.columns(4)
-    c1.metric(translations[lang]["overconfidence"], round(overconfidence, 2))
-    c2.metric(translations[lang]["calibration"], round(calibration, 2))
-    c3.metric(translations[lang]["revisability"], round(revisability, 2))
-    c4.metric(translations[lang]["cognitive_closure"], round(closure, 2))
-    
-    c5, c6, c7 = st.columns(3)
-    c5.metric(translations[lang]["cognitive_potential"], round(potential, 2))
-    c6.metric(translations[lang]["cognitive_field"], round(field, 2))
-    c7.metric(translations[lang]["cognitive_curvature"], round(curvature, 2))
-    
-    st.markdown(f"**{translations[lang]['interpretation']} :** {cog.interpret()}")
+            for item in result["weaknesses"]:
+                st.error(item)
+        else:
+            st.success(translations[lang]["no_major_weakness"])
 
     st.subheader(translations[lang]["hard_fact_checking_by_claim"])
-    claims_df = pd.DataFrame([
-        {
-            translations[lang]["claim"]: c.text,
-            translations[lang]["status"]: c.status,
-            f"{translations[lang]['verifiability']} /20": c.verifiability,
-            f"{translations[lang]['risk']} /20": c.risk,
-            translations[lang]["number"]: translations[lang]["yes"] if c.has_number else translations[lang]["no"],
-            translations[lang]["date"]: translations[lang]["yes"] if c.has_date else translations[lang]["no"],
-            translations[lang]["named_entity"]: translations[lang]["yes"] if c.has_named_entity else translations[lang]["no"],
-            translations[lang]["attributed_source"]: translations[lang]["yes"] if c.has_source_cue else translations[lang]["no"],
-        } for c in result["claims"]
-    ])
-    if not claims_df.empty: st.dataframe(claims_df, use_container_width=True, hide_index=True)
-    else: st.info(translations[lang]["paste_longer_text"])
+    claims_df = pd.DataFrame(
+        [
+            {
+                translations[lang]["claim"]: c.text,
+                translations[lang]["status"]: c.status,
+                f"{translations[lang]['verifiability']} /20": c.verifiability,
+                f"{translations[lang]['risk']} /20": c.risk,
+                translations[lang]["number"]: translations[lang]["yes"] if c.has_number else translations[lang]["no"],
+                translations[lang]["date"]: translations[lang]["yes"] if c.has_date else translations[lang]["no"],
+                translations[lang]["named_entity"]: translations[lang]["yes"] if c.has_named_entity else translations[lang]["no"],
+                translations[lang]["attributed_source"]: translations[lang]["yes"] if c.has_source_cue else translations[lang]["no"],
+            }
+            for c in result["claims"]
+        ]
+    )
+
+    if not claims_df.empty:
+        st.dataframe(claims_df, use_container_width=True, hide_index=True)
+    else:
+        st.info(translations[lang]["paste_longer_text"])
 else:
     st.info(translations[lang]["paste_text_or_load_url"])
 
 if show_method:
     st.subheader(translations[lang]["method"])
-    st.markdown(f"""
+    st.markdown(
+        f"""
 ### {translations[lang]["original_formula"]}
 `M = (G + N) − D`
+
 - {translations[lang]["articulated_knowledge_density"]}
 - {translations[lang]["integration"]}
 - {translations[lang]["assertive_rigidity"]}
 
-### {translations[lang]["llm_metrics"]}
-- **{translations[lang]["overconfidence"]}** : `D - (G + N)`
-- **{translations[lang]["calibration"]}** : `D / (G + N)`
-- **{translations[lang]["revisability"]}** : `(G + N + V) - D`
-- **{translations[lang]["cognitive_closure"]}** : `(D * S) / (G + N)`
+### {translations[lang]["improved_variant"]}
+{translations[lang]["addition_of_v_and_r"]}
+
+### {translations[lang]["hard_fact_checking_module"]}
+{translations[lang]["claim_evaluation_criteria"]}
+{translations[lang]["criteria_list"]}
+
+### {translations[lang]["practical_hard_fact_formula"]}
+`HF = 0.18G + 0.12N + 0.20V + 0.22QS + 0.18VC − 0.16D − 0.12R − 0.18RC − 0.9F + 8`
+
+- **QS** : {translations[lang]["qs"]}
+- **VC** : {translations[lang]["vc"]}
+- **RC** : {translations[lang]["rc"]}
+- **F** : {translations[lang]["f"]}
 
 {translations[lang]["disclaimer"]}
-""")
+        """
+    )
