@@ -24,6 +24,99 @@ translations = {
         "paste": "Collez ici un article ou un texte",
         "verdict": "Verdict",
         "summary": "Résumé de l'analyse",
+        "tagline": "Votre formule comme boussole, un contrôle plus sévère comme garde-frontière.",
+        "settings": "Réglages",
+        "load_example": "Charger l'exemple",
+        "show_method": "Afficher la méthode",
+        "hard_fact_score_scale": "Échelle du hard fact score",
+        "scale_0_5": "0–5 : très fragile",
+        "scale_6_9": "6–9 : douteux",
+        "scale_10_14": "10–14 : plausible mais à recouper",
+        "scale_15_20": "15–20 : structurellement robuste",
+        "analyze_multiple_articles_by_topic": "Analyse de plusieurs articles par sujet",
+        "searching_analyzing_articles": "Recherche et analyse des articles en cours...",
+        "articles_analyzed": "articles analysés.",
+        "analyzed_articles": "Articles analysés",
+        "avg_hard_fact": "Moyenne Hard Fact",
+        "avg_classic_score": "Moyenne score classique",
+        "topic_doxa_index": "Indice de doxa du sujet",
+        "high": "Élevé",
+        "medium": "Moyen",
+        "low": "Faible",
+        "credibility_score_dispersion": "Dispersion des scores de crédibilité",
+        "article_label": "Article",
+        "analyzed_articles_details": "Détail des articles analysés",
+        "no_exploitable_articles_found": "Aucun article exploitable trouvé pour ce sujet.",
+        "enter_keyword_first": "Entrez d'abord un mot-clé ou un sujet.",
+        "article_loaded_from_url": "Article chargé depuis l'URL.",
+        "unable_to_retrieve_text": "Impossible de récupérer le texte de cette URL.",
+        "paste_url_first": "Collez d'abord une URL.",
+        "classic_score": "Score classique",
+        "improved_score": "Score amélioré",
+        "hard_fact_score": "Hard Fact Score",
+        "help_classic_score": "M = (G + N) − D",
+        "help_improved_score": "Ajout de V et pénalité R",
+        "help_hard_fact_score": "Contrôle plus dur des affirmations et des sources",
+        "credibility_gauge": "Jauge de crédibilité",
+        "fragile": "Fragile",
+        "fragile_message": "Le texte présente de fortes fragilités structurelles ou factuelles.",
+        "doubtful": "Douteux",
+        "doubtful_message": "Le texte contient quelques éléments crédibles, mais reste très incertain.",
+        "plausible": "Plausible",
+        "plausible_message": "Le texte paraît globalement plausible, mais demande encore vérification.",
+        "robust": "Robuste",
+        "robust_message": "Le texte présente une base structurelle et factuelle plutôt solide.",
+        "score": "Score",
+        "strengths_detected": "Forces détectées",
+        "few_strong_signals": "Peu de signaux forts repérés.",
+        "weaknesses_detected": "Fragilités détectées",
+        "no_major_weakness": "Aucune fragilité majeure repérée par l'heuristique.",
+        "hard_fact_checking_by_claim": "Fact-checking dur par affirmation",
+        "claim": "Affirmation",
+        "status": "Statut",
+        "verifiability": "Vérifiabilité",
+        "risk": "Risque",
+        "number": "Nombre",
+        "date": "Date",
+        "named_entity": "Nom propre",
+        "attributed_source": "Source attribuée",
+        "paste_longer_text": "Collez un texte un peu plus long pour obtenir une cartographie fine des affirmations.",
+        "paste_text_or_load_url": "Collez un texte ou chargez une URL, puis cliquez sur « 🔍 Analyser l'article ».",
+        "method": "Méthode",
+        "original_formula": "Formule originelle",
+        "articulated_knowledge_density": "G : densité de savoir articulé — sources, chiffres, noms, références, traces vérifiables.",
+        "integration": "N : intégration — contexte, nuances, réserves, cohérence argumentative.",
+        "assertive_rigidity": "D : rigidité assertive — certitudes non soutenues, emballement rhétorique, gonflement doxique.",
+        "improved_variant": "Variante améliorée",
+        "addition_of_v_and_r": "Ajout de V pour la vérifiabilité et de R comme pénalité rhétorique.",
+        "hard_fact_checking_module": "Module de fact-checking dur",
+        "claim_evaluation_criteria": "Chaque phrase est traitée comme une affirmation potentielle, puis évaluée selon:",
+        "criteria_list": "- présence de dates, nombres, noms propres,\n- présence d'une attribution claire,\n- degré d'absolutisme,\n- charge sensationnaliste,\n- qualité probable des sources mentionnées,\n- signaux rouges narratifs.",
+        "practical_hard_fact_formula": "Formule pratique du hard fact score",
+        "qs": "QS : qualité des sources",
+        "vc": "VC : vérifiabilité moyenne des affirmations",
+        "rc": "RC : risque moyen des affirmations",
+        "f": "F : nombre de red flags",
+        "disclaimer": "Cette app ne remplace pas un vrai journaliste, un vrai chercheur, ni un greffier de la réalité. Mais elle retire déjà quelques masques au texte qui parade.",
+        "presence_of_source_markers": "Présence de marqueurs de sources ou de données",
+        "verifiability_clues": "Indices de vérifiabilité repérés : liens, chiffres, dates ou pourcentages",
+        "text_contains_nuances": "Le texte contient des nuances, limites ou contrepoints",
+        "text_evokes_robust_sources": "Le texte évoque des sources potentiellement robustes ou institutionnelles",
+        "some_claims_verifiable": "Certaines affirmations sont assez bien ancrées pour être vérifiées proprement",
+        "overly_assertive_language": "Langage trop assuré ou absolutiste",
+        "notable_emotional_sensational_charge": "Charge émotionnelle ou sensationnaliste notable",
+        "almost_total_absence_of_verifiable_elements": "Absence quasi totale d'éléments vérifiables",
+        "text_too_short": "Texte trop court pour soutenir sérieusement une affirmation forte",
+        "multiple_claims_very_fragile": "Plusieurs affirmations centrales sont très fragiles au regard des indices présents",
+        "to_verify": "À vérifier",
+        "rather_verifiable": "Plutôt vérifiable",
+        "very_fragile": "Très fragile",
+        "low_credibility": "Crédibilité basse",
+        "prudent_credibility": "Crédibilité prudente",
+        "rather_credible": "Plutôt crédible",
+        "strong_credibility": "Crédibilité forte",
+        "yes": "Oui",
+        "no": "Non",
     },
     "English": {
         "title": "🧠 Mecroyance Lab — Credibility Analyzer",
@@ -35,6 +128,93 @@ translations = {
         "paste": "Paste an article or text here",
         "verdict": "Verdict",
         "summary": "Analysis summary",
+        "tagline": "Your formula as a compass, stricter control as a border guard.",
+        "settings": "Settings",
+        "load_example": "Load example",
+        "show_method": "Show method",
+        "hard_fact_score_scale": "Hard Fact Score Scale",
+        "scale_0_5": "0–5 : very fragile",
+        "scale_6_9": "6–9 : doubtful",
+        "scale_10_14": "10–14 : plausible but needs cross-referencing",
+        "scale_15_20": "15–20 : structurally robust",
+        "analyze_multiple_articles_by_topic": "Analyze multiple articles by topic",
+        "searching_analyzing_articles": "Searching and analyzing articles...",
+        "articles_analyzed": "articles analyzed.",
+        "analyzed_articles": "Analyzed Articles",
+        "avg_hard_fact": "Avg Hard Fact",
+        "avg_classic_score": "Avg Classic Score",
+        "topic_doxa_index": "Topic Doxa Index",
+        "high": "High",
+        "medium": "Medium",
+        "low": "Low",
+        "credibility_score_dispersion": "Credibility Score Dispersion",
+        "article_label": "Article",
+        "analyzed_articles_details": "Details of analyzed articles",
+        "no_exploitable_articles_found": "No exploitable articles found for this topic.",
+        "enter_keyword_first": "Enter a keyword or topic first.",
+        "article_loaded_from_url": "Article loaded from URL.",
+        "unable_to_retrieve_text": "Unable to retrieve text from this URL.",
+        "paste_url_first": "Paste a URL first.",
+        "classic_score": "Classic Score",
+        "improved_score": "Improved Score",
+        "hard_fact_score": "Hard Fact Score",
+        "help_classic_score": "M = (G + N) − D",
+        "help_improved_score": "Addition of V and R penalty",
+        "help_hard_fact_score": "Stricter control of claims and sources",
+        "credibility_gauge": "Credibility Gauge",
+        "fragile": "Fragile",
+        "fragile_message": "The text shows strong structural or factual weaknesses.",
+        "doubtful": "Doubtful",
+        "doubtful_message": "The text contains some credible elements, but remains very uncertain.",
+        "plausible": "Plausible",
+        "plausible_message": "The text appears generally plausible, but still requires verification.",
+        "robust": "Robust",
+        "robust_message": "The text presents a rather solid structural and factual basis.",
+        "score": "Score",
+        "strengths_detected": "Strengths detected",
+        "few_strong_signals": "Few strong signals identified.",
+        "weaknesses_detected": "Weaknesses detected",
+        "no_major_weakness": "No major weakness identified by heuristics.",
+        "hard_fact_checking_by_claim": "Hard fact-checking by claim",
+        "claim": "Claim",
+        "status": "Status",
+        "verifiability": "Verifiability",
+        "risk": "Risk",
+        "number": "Number",
+        "date": "Date",
+        "named_entity": "Named Entity",
+        "attributed_source": "Attributed Source",
+        "paste_longer_text": "Paste a slightly longer text to get a fine mapping of claims.",
+        "paste_text_or_load_url": "Paste a text or load a URL, then click on « 🔍 Analyze article ».",
+        "method": "Method",
+        "original_formula": "Original Formula",
+        "articulated_knowledge_density": "G : articulated knowledge density — sources, figures, names, references, verifiable traces.",
+        "integration": "N : integration — context, nuances, reservations, argumentative coherence.",
+        "assertive_rigidity": "D : assertive rigidity — unsupported certainties, rhetorical exuberance, doxic inflation.",
+        "improved_variant": "Improved Variant",
+        "addition_of_v_and_r": "Addition of V for verifiability and R as rhetorical penalty.",
+        "hard_fact_checking_module": "Hard Fact-Checking Module",
+        "claim_evaluation_criteria": "Each sentence is treated as a potential claim, then evaluated according to:",
+        "criteria_list": "- presence of dates, numbers, proper nouns,\n- presence of clear attribution,\n- degree of absolutism,\n- sensational charge,\n- probable quality of mentioned sources,\n- narrative red flags.",
+        "practical_hard_fact_formula": "Practical Hard Fact Score Formula",
+        "qs": "QS : quality of sources",
+        "vc": "VC : average verifiability of claims",
+        "rc": "RC : average risk of claims",
+        "f": "F : number of red flags",
+        "disclaimer": "This app does not replace a real journalist, a real researcher, or a reality clerk. But it already removes some masks from the parading text.",
+        "presence_of_source_markers": "Presence of source or data markers",
+        "verifiability_clues": "Verifiability clues identified: links, numbers, dates or percentages",
+        "text_contains_nuances": "The text contains nuances, limitations or counterpoints",
+        "text_evokes_robust_sources": "The text evokes potentially robust or institutional sources",
+        "some_claims_verifiable": "Some claims are well-anchored enough to be properly verified",
+        "overly_assertive_language": "Overly assertive or absolutist language",
+        "notable_emotional_sensational_charge": "Notable emotional or sensational charge",
+        "almost_total_absence_of_verifiable_elements": "Almost total absence of verifiable elements",
+        "text_too_short": "Text too short to seriously support a strong claim",
+        "multiple_claims_very_fragile": "Multiple central claims are very fragile given the present clues",
+        "to_verify": "To verify",
+        "rather_verifiable": "Rather verifiable",
+        "very_fragile": "Very fragile",
     },
     "Español": {
         "title": "🧠 Laboratorio de Mecroyancia — Analizador de credibilidad",
@@ -46,6 +226,93 @@ translations = {
         "paste": "Pegue aquí un artículo o texto",
         "verdict": "Veredicto",
         "summary": "Resumen del análisis",
+        "tagline": "Tu fórmula como brújula, un control más estricto como guardia fronterizo.",
+        "settings": "Configuración",
+        "load_example": "Cargar ejemplo",
+        "show_method": "Mostrar método",
+        "hard_fact_score_scale": "Escala de Puntuación de Hechos Duros",
+        "scale_0_5": "0–5 : muy frágil",
+        "scale_6_9": "6–9 : dudoso",
+        "scale_10_14": "10–14 : plausible pero necesita verificación cruzada",
+        "scale_15_20": "15–20 : estructuralmente robusto",
+        "analyze_multiple_articles_by_topic": "Analizar múltiples artículos por tema",
+        "searching_analyzing_articles": "Buscando y analizando artículos...",
+        "articles_analyzed": "artículos analizados.",
+        "analyzed_articles": "Artículos Analizados",
+        "avg_hard_fact": "Promedio Hecho Duro",
+        "avg_classic_score": "Promedio Puntuación Clásica",
+        "topic_doxa_index": "Índice de Doxa del Tema",
+        "high": "Alto",
+        "medium": "Medio",
+        "low": "Bajo",
+        "credibility_score_dispersion": "Dispersión de Puntuación de Credibilidad",
+        "article_label": "Artículo",
+        "analyzed_articles_details": "Detalles de los artículos analizados",
+        "no_exploitable_articles_found": "No se encontraron artículos explotables para este tema.",
+        "enter_keyword_first": "Ingrese primero una palabra clave o tema.",
+        "article_loaded_from_url": "Artículo cargado desde la URL.",
+        "unable_to_retrieve_text": "No se pudo recuperar el texto de esta URL.",
+        "paste_url_first": "Pegue primero una URL.",
+        "classic_score": "Puntuación Clásica",
+        "improved_score": "Puntuación Mejorada",
+        "hard_fact_score": "Puntuación de Hechos Duros",
+        "help_classic_score": "M = (G + N) − D",
+        "help_improved_score": "Adición de V y penalización R",
+        "help_hard_fact_score": "Control más estricto de afirmaciones y fuentes",
+        "credibility_gauge": "Medidor de Credibilidad",
+        "fragile": "Frágil",
+        "fragile_message": "El texto presenta fuertes debilidades estructurales o fácticas.",
+        "doubtful": "Dudoso",
+        "doubtful_message": "El texto contiene algunos elementos creíbles, pero sigue siendo muy incierto.",
+        "plausible": "Plausible",
+        "plausible_message": "El texto parece generalmente plausible, pero aún requiere verificación.",
+        "robust": "Robusto",
+        "robust_message": "El texto presenta una base estructural y fáctica bastante sólida.",
+        "score": "Puntuación",
+        "strengths_detected": "Fortalezas detectadas",
+        "few_strong_signals": "Pocas señales fuertes identificadas.",
+        "weaknesses_detected": "Debilidades detectadas",
+        "no_major_weakness": "No se identificaron debilidades importantes por heurística.",
+        "hard_fact_checking_by_claim": "Verificación de hechos duros por afirmación",
+        "claim": "Afirmación",
+        "status": "Estado",
+        "verifiability": "Verificabilidad",
+        "risk": "Riesgo",
+        "number": "Número",
+        "date": "Fecha",
+        "named_entity": "Entidad Nombrada",
+        "attributed_source": "Fuente Atribuida",
+        "paste_longer_text": "Pegue un texto un poco más largo para obtener un mapeo fino de las afirmaciones.",
+        "paste_text_or_load_url": "Pegue un texto o cargue una URL, luego haga clic en « 🔍 Analizar artículo ».",
+        "method": "Método",
+        "original_formula": "Fórmula Original",
+        "articulated_knowledge_density": "G : densidad de conocimiento articulado — fuentes, cifras, nombres, referencias, rastros verificables.",
+        "integration": "N : integración — contexto, matices, reservas, coherencia argumentativa.",
+        "assertive_rigidity": "D : rigidez asertiva — certezas no respaldadas, exuberancia retórica, inflación doxástica.",
+        "improved_variant": "Variante Mejorada",
+        "addition_of_v_and_r": "Adición de V para la verificabilidad y R como penalización retórica.",
+        "hard_fact_checking_module": "Módulo de Verificación de Hechos Duros",
+        "claim_evaluation_criteria": "Cada oración se trata como una afirmación potencial, luego se evalúa según:",
+        "criteria_list": "- presencia de fechas, números, nombres propios,\n- presencia de atribución clara,\n- grado de absolutismo,\n- carga sensacionalista,\n- calidad probable de las fuentes mencionadas,\n- señales de alerta narrativas.",
+        "practical_hard_fact_formula": "Fórmula Práctica de Puntuación de Hechos Duros",
+        "qs": "QS : calidad de las fuentes",
+        "vc": "VC : verificabilidad promedio de las afirmaciones",
+        "rc": "RC : riesgo promedio de las afirmaciones",
+        "f": "F : número de banderas rojas",
+        "disclaimer": "Esta aplicación no reemplaza a un periodista real, un investigador real o un secretario de la realidad. Pero ya quita algunas máscaras al texto que desfila.",
+        "presence_of_source_markers": "Presencia de marcadores de fuente o datos",
+        "verifiability_clues": "Pistas de verificabilidad identificadas: enlaces, números, fechas o porcentajes",
+        "text_contains_nuances": "El texto contiene matices, limitaciones o contrapuntos",
+        "text_evokes_robust_sources": "El texto evoca fuentes potencialmente robustas o institucionales",
+        "some_claims_verifiable": "Algunas afirmaciones están lo suficientemente bien ancladas para ser verificadas correctamente",
+        "overly_assertive_language": "Lenguaje excesivamente asertivo o absolutista",
+        "notable_emotional_sensational_charge": "Notable carga emocional o sensacionalista",
+        "almost_total_absence_of_verifiable_elements": "Ausencia casi total de elementos verificables",
+        "text_too_short": "Texto demasiado corto para respaldar seriamente una afirmación fuerte",
+        "multiple_claims_very_fragile": "Múltiples afirmaciones centrales son muy frágiles dadas las pistas presentes",
+        "to_verify": "A verificar",
+        "rather_verifiable": "Más bien verificable",
+        "very_fragile": "Muy frágil",
     },
     "Filipino": {
         "title": "🧠 Mecroyance Lab — Pagsusuri ng Kredibilidad",
@@ -57,6 +324,93 @@ translations = {
         "paste": "Ilagay dito ang artikulo o teksto",
         "verdict": "Hatol",
         "summary": "Buod ng pagsusuri",
+        "tagline": "Ang iyong pormula bilang kompas, mas mahigpit na kontrol bilang bantay-hangganan.",
+        "settings": "Mga Setting",
+        "load_example": "I-load ang halimbawa",
+        "show_method": "Ipakita ang pamamaraan",
+        "hard_fact_score_scale": "Hard Fact Score Scale",
+        "scale_0_5": "0–5 : napakahina",
+        "scale_6_9": "6–9 : kaduda-duda",
+        "scale_10_14": "10–14 : kapani-paniwala ngunit kailangan ng cross-referencing",
+        "scale_15_20": "15–20 : matatag sa istruktura",
+        "analyze_multiple_articles_by_topic": "Suriin ang maraming artikulo ayon sa paksa",
+        "searching_analyzing_articles": "Naghahanap at nagsusuri ng mga artikulo...",
+        "articles_analyzed": "mga artikulo na nasuri.",
+        "analyzed_articles": "Mga Nasuring Artikulo",
+        "avg_hard_fact": "Avg Hard Fact",
+        "avg_classic_score": "Avg Classic Score",
+        "topic_doxa_index": "Indeks ng Doxa ng Paksa",
+        "high": "Mataas",
+        "medium": "Katamtaman",
+        "low": "Mababa",
+        "credibility_score_dispersion": "Pagkalat ng Puntos ng Kredibilidad",
+        "article_label": "Artikulo",
+        "analyzed_articles_details": "Mga Detalye ng Nasuring Artikulo",
+        "no_exploitable_articles_found": "Walang nakitang magagamit na artikulo para sa paksang ito.",
+        "enter_keyword_first": "Maglagay muna ng keyword o paksa.",
+        "article_loaded_from_url": "Na-load ang artikulo mula sa URL.",
+        "unable_to_retrieve_text": "Hindi makuha ang teksto mula sa URL na ito.",
+        "paste_url_first": "Mag-paste muna ng URL.",
+        "classic_score": "Klasikong Puntos",
+        "improved_score": "Pinahusay na Puntos",
+        "hard_fact_score": "Hard Fact Score",
+        "help_classic_score": "M = (G + N) − D",
+        "help_improved_score": "Pagdaragdag ng V at parusa sa R",
+        "help_hard_fact_score": "Mas mahigpit na kontrol sa mga pahayag at pinagmulan",
+        "credibility_gauge": "Sukat ng Kredibilidad",
+        "fragile": "Mahina",
+        "fragile_message": "Ang teksto ay nagpapakita ng malakas na istruktural o paktwal na kahinaan.",
+        "doubtful": "Kaduda-duda",
+        "doubtful_message": "Ang teksto ay naglalaman ng ilang kapani-paniwalang elemento, ngunit nananatiling napaka-hindi tiyak.",
+        "plausible": "Kapani-paniwala",
+        "plausible_message": "Ang teksto ay lumilitaw na pangkalahatang kapani-paniwala, ngunit nangangailangan pa rin ng pagpapatunay.",
+        "robust": "Matatag",
+        "robust_message": "Ang teksto ay nagtatanghal ng isang medyo solidong istruktural at paktwal na batayan.",
+        "score": "Puntos",
+        "strengths_detected": "Mga lakas na natukoy",
+        "few_strong_signals": "Ilang malakas na signal ang natukoy.",
+        "weaknesses_detected": "Mga kahinaan na natukoy",
+        "no_major_weakness": "Walang pangunahing kahinaan na natukoy ng heuristika.",
+        "hard_fact_checking_by_claim": "Hard fact-checking sa bawat pahayag",
+        "claim": "Pahayag",
+        "status": "Katayuan",
+        "verifiability": "Pagpapatunay",
+        "risk": "Panganib",
+        "number": "Numero",
+        "date": "Petsa",
+        "named_entity": "Pinangalanang Entidad",
+        "attributed_source": "Iniugnay na Pinagmulan",
+        "paste_longer_text": "Mag-paste ng bahagyang mas mahabang teksto upang makakuha ng detalyadong pagmamapa ng mga pahayag.",
+        "paste_text_or_load_url": "Mag-paste ng teksto o mag-load ng URL, pagkatapos ay i-click ang « 🔍 Suriin ang artikulo ».",
+        "method": "Paraan",
+        "original_formula": "Orihinal na Pormula",
+        "articulated_knowledge_density": "G : density ng articulated knowledge — mga pinagmulan, numero, pangalan, sanggunian, nabe-verify na bakas.",
+        "integration": "N : integrasyon — konteksto, nuances, reserbasyon, lohikal na pagkakaugnay.",
+        "assertive_rigidity": "D : assertive rigidity — hindi suportadong katiyakan, retorikal na pagmamalabis, doxic inflation.",
+        "improved_variant": "Pinahusay na Variant",
+        "addition_of_v_and_r": "Pagdaragdag ng V para sa pagpapatunay at R bilang retorikal na parusa.",
+        "hard_fact_checking_module": "Hard Fact-Checking Module",
+        "claim_evaluation_criteria": "Ang bawat pangungusap ay itinuturing na isang potensyal na pahayag, pagkatapos ay sinusuri ayon sa:",
+        "criteria_list": "- pagkakaroon ng mga petsa, numero, wastong pangalan,\n- pagkakaroon ng malinaw na atribusyon,\n- antas ng absolutismo,\n- sensational na singil,\n- posibleng kalidad ng mga nabanggit na pinagmulan,\n- narrative red flags.",
+        "practical_hard_fact_formula": "Praktikal na Pormula ng Hard Fact Score",
+        "qs": "QS : kalidad ng mga pinagmulan",
+        "vc": "VC : average na pagpapatunay ng mga pahayag",
+        "rc": "RC : average na panganib ng mga pahayag",
+        "f": "F : bilang ng mga red flag",
+        "disclaimer": "Ang app na ito ay hindi pumapalit sa isang tunay na mamamahayag, isang tunay na mananaliksik, o isang klerk ng katotohanan. Ngunit tinatanggal na nito ang ilang maskara mula sa nagpaparadang teksto.",
+        "presence_of_source_markers": "Pagkakaroon ng mga marker ng pinagmulan o data",
+        "verifiability_clues": "Mga pahiwatig ng pagpapatunay na natukoy: mga link, numero, petsa o porsyento",
+        "text_contains_nuances": "Ang teksto ay naglalaman ng mga nuances, limitasyon o kontrapunto",
+        "text_evokes_robust_sources": "Ang teksto ay nagpapahiwatig ng posibleng matatag o institusyonal na pinagmulan",
+        "some_claims_verifiable": "Ang ilang mga pahayag ay sapat na nakabaon upang maayos na mapatunayan",
+        "overly_assertive_language": "Labis na mapilit o absolutistang wika",
+        "notable_emotional_sensational_charge": "Kapansin-pansing emosyonal o sensational na singil",
+        "almost_total_absence_of_verifiable_elements": "Halos kumpletong kawalan ng nabe-verify na elemento",
+        "text_too_short": "Masyadong maikli ang teksto upang seryosong suportahan ang isang malakas na pahayag",
+        "multiple_claims_very_fragile": "Maraming sentral na pahayag ang napakahina dahil sa kasalukuyang mga pahiwatig",
+        "to_verify": "Upang i-verify",
+        "rather_verifiable": "Sa halip nabe-verify",
+        "very_fragile": "Napakabihira",
     },
 }
 
@@ -341,11 +695,11 @@ def assess_claim(sentence: str) -> ClaimAssessment:
         risk -= 1.5
     risk = round(clamp(risk), 1)
 
-    status = "À vérifier"
+    status = translations[lang]["to_verify"]
     if verifiability >= 12 and risk <= 7:
-        status = "Plutôt vérifiable"
+        status = translations[lang]["rather_verifiable"]
     elif risk >= 12:
-        status = "Très fragile"
+        status = translations[lang]["very_fragile"]
 
     return ClaimAssessment(
         text=sentence,
@@ -447,39 +801,39 @@ def analyze_article(text: str) -> Dict:
     hard_fact_score = round(clamp(hard_fact_score_raw + 8, 0, 20), 1)
 
     if hard_fact_score < 6:
-        verdict = "Crédibilité basse"
+        verdict = translations[lang]["low_credibility"]
     elif hard_fact_score < 10:
-        verdict = "Crédibilité prudente"
+        verdict = translations[lang]["prudent_credibility"]
     elif hard_fact_score < 15:
-        verdict = "Plutôt crédible"
+        verdict = translations[lang]["rather_credible"]
     else:
-        verdict = "Crédibilité forte"
+        verdict = translations[lang]["strong_credibility"]
 
     strengths = []
     weaknesses = []
 
     if source_markers >= 2:
-        strengths.append("Présence de marqueurs de sources ou de données")
+        strengths.append(translations[lang]["presence_of_source_markers"])
     if citation_like >= 2:
-        strengths.append("Indices de vérifiabilité repérés : liens, chiffres, dates ou pourcentages")
+        strengths.append(translations[lang]["verifiability_clues"])
     if nuance_markers >= 2:
-        strengths.append("Le texte contient des nuances, limites ou contrepoints")
+        strengths.append(translations[lang]["text_contains_nuances"])
     if source_quality >= 12:
-        strengths.append("Le texte évoque des sources potentiellement robustes ou institutionnelles")
-    if any(c.status == "Plutôt vérifiable" for c in claims):
-        strengths.append("Certaines affirmations sont assez bien ancrées pour être vérifiées proprement")
+        strengths.append(translations[lang]["text_evokes_robust_sources"])
+    if any(c.status == translations[lang]["rather_verifiable"] for c in claims):
+        strengths.append(translations[lang]["some_claims_verifiable"])
 
     if certainty >= 3:
-        weaknesses.append("Langage trop assuré ou absolutiste")
+        weaknesses.append(translations[lang]["overly_assertive_language"])
     if emotional >= 2:
-        weaknesses.append("Charge émotionnelle ou sensationnaliste notable")
+        weaknesses.append(translations[lang]["notable_emotional_sensational_charge"])
     if source_markers == 0 and citation_like == 0:
-        weaknesses.append("Absence quasi totale d'éléments vérifiables")
+        weaknesses.append(translations[lang]["almost_total_absence_of_verifiable_elements"])
     if article_length < 80:
-        weaknesses.append("Texte trop court pour soutenir sérieusement une affirmation forte")
+        weaknesses.append(translations[lang]["text_too_short"])
     weaknesses.extend(red_flags)
-    if sum(1 for c in claims if c.status == "Très fragile") >= 2:
-        weaknesses.append("Plusieurs affirmations centrales sont très fragiles au regard des indices présents")
+    if sum(1 for c in claims if c.status == translations[lang]["very_fragile"]) >= 2:
+        weaknesses.append(translations[lang]["multiple_claims_very_fragile"])
 
     return {
         "words": len(words),
@@ -507,20 +861,20 @@ def analyze_article(text: str) -> Dict:
 # Interface
 # -----------------------------
 st.title(translations[lang]["title"])
-st.caption("Votre formule comme boussole, un contrôle plus sévère comme garde-frontière.")
+    st.caption(translations[lang]["tagline"])
 
 with st.sidebar:
-    st.header("Réglages")
-    use_sample = st.button("Charger l'exemple")
-    show_method = st.toggle("Afficher la méthode", value=True)
+    st.header(translations[lang]["settings"])
+    use_sample = st.button(translations[lang]["load_example"])
+    show_method = st.toggle(translations[lang]["show_method"], value=True)
     st.divider()
-    st.subheader("Échelle du hard fact score")
+    st.subheader(translations[lang]["hard_fact_score_scale"])
     st.markdown(
-        """
-- **0–5** : très fragile  
-- **6–9** : douteux  
-- **10–14** : plausible mais à recouper  
-- **15–20** : structurellement robuste
+        f"""
+- **0–5** : {translations[lang]["scale_0_5"]}  
+- **6–9** : {translations[lang]["scale_6_9"]}  
+- **10–14** : {translations[lang]["scale_10_14"]}  
+- **15–20** : {translations[lang]["scale_15_20"]}
         """
     )
 
@@ -530,13 +884,13 @@ if "article" not in st.session_state:
 if use_sample:
     st.session_state.article = SAMPLE_ARTICLE
 
-st.subheader("Analyse de plusieurs articles par sujet")
+st.subheader(translations[lang]["analyze_multiple_articles_by_topic"])
 
 keyword = st.text_input(translations[lang]["topic"], placeholder="ex : intelligence artificielle")
 
 if st.button(translations[lang]["analyze_topic"], key="analyze_topic"):
     if keyword.strip():
-        st.info("Recherche et analyse des articles en cours...")
+        st.info(translations[lang]["searching_analyzing_articles"])
         multiple_results = analyze_multiple_articles(keyword.strip(), max_results=10)
 
         if multiple_results:
@@ -545,15 +899,15 @@ if st.button(translations[lang]["analyze_topic"], key="analyze_topic"):
             # tri du plus crédible au moins crédible
             df_multi = df_multi.sort_values("Hard Fact Score", ascending=False)
 
-            st.success(f"{len(df_multi)} articles analysés.")
+            st.success(f"{len(df_multi)} {translations[lang]["articles_analyzed"]}")
 
             moyenne_hf = round(df_multi["Hard Fact Score"].mean(), 1)
             moyenne_classique = round(df_multi["Score classique"].mean(), 1)
 
             c1, c2, c3 = st.columns(3)
-            c1.metric("Articles analysés", len(df_multi))
-            c2.metric("Moyenne Hard Fact", moyenne_hf)
-            c3.metric("Moyenne score classique", moyenne_classique)
+            c1.metric(translations[lang]["analyzed_articles"], len(df_multi))
+            c2.metric(translations[lang]["avg_hard_fact"], moyenne_hf)
+            c3.metric(translations[lang]["avg_classic_score"], moyenne_classique)
 
             ecart_type_hf = round(df_multi["Hard Fact Score"].std(), 2)
 
@@ -564,20 +918,20 @@ if st.button(translations[lang]["analyze_topic"], key="analyze_topic"):
             else:
                 indice_doxa = "Faible"
 
-            st.metric("Indice de doxa du sujet", indice_doxa)
+            st.metric(translations[lang]["topic_doxa_index"], indice_doxa)
 
-            st.subheader("Dispersion des scores de crédibilité")
+            st.subheader(translations[lang]["credibility_score_dispersion"])
 
             df_plot = df_multi.copy()
-            df_plot["Article"] = [f"Article {i+1}" for i in range(len(df_plot))]
+            df_plot["Article"] = [f"{translations[lang]["article_label"]} {i+1}" for i in range(len(df_plot))]
             st.bar_chart(df_plot.set_index("Article")["Hard Fact Score"])
 
-            st.subheader("Détail des articles analysés")
+            st.subheader(translations[lang]["analyzed_articles_details"])
             st.dataframe(df_multi, use_container_width=True, hide_index=True)
         else:
-            st.warning("Aucun article exploitable trouvé pour ce sujet.")
+            st.warning(translations[lang]["no_exploitable_articles_found"])
     else:
-        st.warning("Entrez d'abord un mot-clé ou un sujet.")
+        st.warning(translations[lang]["enter_keyword_first"])
 
 url = st.text_input(translations[lang]["url"])
 
@@ -586,11 +940,11 @@ if st.button(translations[lang]["load_url"], key="load_url"):
         texte = extract_article_from_url(url)
         if texte:
             st.session_state.article = texte
-            st.success("Article chargé depuis l'URL.")
+            st.success(translations[lang]["article_loaded_from_url"])
         else:
-            st.error("Impossible de récupérer le texte de cette URL.")
+            st.error(translations[lang]["unable_to_retrieve_text"])
     else:
-        st.warning("Collez d'abord une URL.")
+        st.warning(translations[lang]["paste_url_first"])
 
 article = st.text_area(
     translations[lang]["paste"],
@@ -611,36 +965,36 @@ if analyser:
     result = analyze_article(article)
 
     col1, col2, col3 = st.columns(3)
-    col1.metric("Score classique", result["M"], help="M = (G + N) − D")
-    col2.metric("Score amélioré", result["improved"], help="Ajout de V et pénalité R")
+    col1.metric(translations[lang]["classic_score"], result["M"], help=translations[lang]["help_classic_score"])
+    col2.metric(translations[lang]["improved_score"], result["improved"], help=translations[lang]["help_improved_score"])
     col3.metric(
-        "Hard Fact Score",
+        translations[lang]["hard_fact_score"],
         result["hard_fact_score"],
-        help="Contrôle plus dur des affirmations et des sources",
+        help=translations[lang]["help_hard_fact_score"],
     )
 
     score = result["hard_fact_score"]
 
     if score <= 6:
         couleur = "🔴"
-        etiquette = "Fragile"
-        message = "Le texte présente de fortes fragilités structurelles ou factuelles."
+        etiquette = translations[lang]["fragile"]
+        message = translations[lang]["fragile_message"]
     elif score <= 11:
         couleur = "🟠"
-        etiquette = "Douteux"
-        message = "Le texte contient quelques éléments crédibles, mais reste très incertain."
+        etiquette = translations[lang]["doubtful"]
+        message = translations[lang]["doubtful_message"]
     elif score <= 15:
         couleur = "🟡"
-        etiquette = "Plausible"
-        message = "Le texte paraît globalement plausible, mais demande encore vérification."
+        etiquette = translations[lang]["plausible"]
+        message = translations[lang]["plausible_message"]
     else:
         couleur = "🟢"
-        etiquette = "Robuste"
-        message = "Le texte présente une base structurelle et factuelle plutôt solide."
+        etiquette = translations[lang]["robust"]
+        message = translations[lang]["robust_message"]
 
-    st.subheader(f"{couleur} Jauge de crédibilité : {etiquette}")
+    st.subheader(f"{couleur} {translations[lang]["credibility_gauge"]} : {etiquette}")
     st.progress(score / 20)
-    st.caption(f"Score : {score}/20 — {message}")
+    st.caption(f"{translations[lang]["score"]} : {score}/20 — {message}")
 
     st.subheader(f"{translations[lang]['verdict']} : {result['verdict']}")
     st.subheader(translations[lang]["summary"])
@@ -652,37 +1006,37 @@ if analyser:
     m4.metric("V — vérifiabilité", result["V"])
 
     m5, m6, m7, m8 = st.columns(4)
-    m5.metric("Qualité des sources", result["source_quality"])
-    m6.metric("Risque moyen des claims", result["avg_claim_risk"])
-    m7.metric("Vérifiabilité moyenne", result["avg_claim_verifiability"])
-    m8.metric("Red flags", len(result["red_flags"]))
+    m5.metric(translations[lang]["qs"], result["source_quality"])
+    m6.metric(translations[lang]["rc"], result["avg_claim_risk"])
+    m7.metric(translations[lang]["vc"], result["avg_claim_verifiability"])
+    m8.metric(translations[lang]["f"], len(result["red_flags"]))
 
-    with st.expander("Forces détectées", expanded=True):
+    with st.expander(translations[lang]["strengths_detected"], expanded=True):
         if result["strengths"]:
             for item in result["strengths"]:
                 st.success(item)
         else:
-            st.info("Peu de signaux forts repérés.")
+            st.info(translations[lang]["few_strong_signals"])
 
-    with st.expander("Fragilités détectées", expanded=True):
+    with st.expander(translations[lang]["weaknesses_detected"], expanded=True):
         if result["weaknesses"]:
             for item in result["weaknesses"]:
                 st.error(item)
         else:
-            st.success("Aucune fragilité majeure repérée par l'heuristique.")
+            st.success(translations[lang]["no_major_weakness"])
 
-    st.subheader("Fact-checking dur par affirmation")
+    st.subheader(translations[lang]["hard_fact_checking_by_claim"])
     claims_df = pd.DataFrame(
         [
             {
-                "Affirmation": c.text,
-                "Statut": c.status,
-                "Vérifiabilité /20": c.verifiability,
-                "Risque /20": c.risk,
-                "Nombre": "Oui" if c.has_number else "Non",
-                "Date": "Oui" if c.has_date else "Non",
-                "Nom propre": "Oui" if c.has_named_entity else "Non",
-                "Source attribuée": "Oui" if c.has_source_cue else "Non",
+                translations[lang]["claim"]: c.text,
+                translations[lang]["status"]: c.status,
+                f"{translations[lang]["verifiability"]} /20": c.verifiability,
+                f"{translations[lang]["risk"]} /20": c.risk,
+                translations[lang]["number"]: translations[lang]["yes"] if c.has_number else translations[lang]["no"],
+                translations[lang]["date"]: translations[lang]["yes"] if c.has_date else translations[lang]["no"],
+                translations[lang]["named_entity"]: translations[lang]["yes"] if c.has_named_entity else translations[lang]["no"],
+                translations[lang]["attributed_source"]: translations[lang]["yes"] if c.has_source_cue else translations[lang]["no"],
             }
             for c in result["claims"]
         ]
@@ -691,41 +1045,36 @@ if analyser:
     if not claims_df.empty:
         st.dataframe(claims_df, use_container_width=True, hide_index=True)
     else:
-        st.info("Collez un texte un peu plus long pour obtenir une cartographie fine des affirmations.")
+        st.info(translations[lang]["paste_longer_text"])
 else:
-    st.info("Collez un texte ou chargez une URL, puis cliquez sur « 🔍 Analyser l'article ».")
+    st.info(translations[lang]["paste_text_or_load_url"])
 
 if show_method:
-    st.subheader("Méthode")
+    st.subheader(translations[lang]["method"])
     st.markdown(
-        """
-### Formule originelle
+        f"""
+### {translations[lang]["original_formula"]}
 `M = (G + N) − D`
 
-- **G** : densité de savoir articulé — sources, chiffres, noms, références, traces vérifiables.
-- **N** : intégration — contexte, nuances, réserves, cohérence argumentative.
-- **D** : rigidité assertive — certitudes non soutenues, emballement rhétorique, gonflement doxique.
+- {translations[lang]["articulated_knowledge_density"]}
+- {translations[lang]["integration"]}
+- {translations[lang]["assertive_rigidity"]}
 
-### Variante améliorée
-Ajout de **V** pour la vérifiabilité et de **R** comme pénalité rhétorique.
+### {translations[lang]["improved_variant"]}
+{translations[lang]["addition_of_v_and_r"]}
 
-### Module de fact-checking dur
-Chaque phrase est traitée comme une affirmation potentielle, puis évaluée selon :
-- présence de dates, nombres, noms propres,
-- présence d'une attribution claire,
-- degré d'absolutisme,
-- charge sensationnaliste,
-- qualité probable des sources mentionnées,
-- signaux rouges narratifs.
+### {translations[lang]["hard_fact_checking_module"]}
+{translations[lang]["claim_evaluation_criteria"]}
+{translations[lang]["criteria_list"]}
 
-### Formule pratique du hard fact score
+### {translations[lang]["practical_hard_fact_formula"]}
 `HF = 0.18G + 0.12N + 0.20V + 0.22QS + 0.18VC − 0.16D − 0.12R − 0.18RC − 0.9F + 8`
 
-- **QS** : qualité des sources
-- **VC** : vérifiabilité moyenne des affirmations
-- **RC** : risque moyen des affirmations
-- **F** : nombre de red flags
+- **QS** : {translations[lang]["qs"]}
+- **VC** : {translations[lang]["vc"]}
+- **RC** : {translations[lang]["rc"]}
+- **F** : {translations[lang]["f"]}
 
-Cette app ne remplace pas un vrai journaliste, un vrai chercheur, ni un greffier de la réalité. Mais elle retire déjà quelques masques au texte qui parade.
+{translations[lang]["disclaimer"]}
         """
     )
