@@ -680,7 +680,13 @@ def analyze_multiple_articles(keyword: str, max_results: int = 10):
 # -----------------------------
 # Interface
 # -----------------------------
-st.title(translations[lang]["title"])
+# Bannière principale
+BANNER_URL = "https://raw.githubusercontent.com/nrledard-web/Doxa-Detector-Cognitive-Credibility-Analyzer/main/banner.png"
+try:
+    st.image(BANNER_URL, use_container_width=True)
+except:
+    st.title(translations[lang]["title"])
+
 st.caption(translations[lang]["tagline"])
 
 with st.sidebar:
